@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Browse all song starting with letter" xml:space="preserve">
+    <value>Xem tất cả các bài hát bắt đầu bằng từ</value>
+  </data>
+  <data name="Find" xml:space="preserve">
+    <value>Find...</value>
+  </data>
+  <data name="In" xml:space="preserve">
+    <value>Trong</value>
+  </data>
+  <data name="Most Popular" xml:space="preserve">
+    <value>Phổ biến nhất</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Tìm kiếm</value>
+  </data>
+  <data name="Song" xml:space="preserve">
+    <value>Bài hát</value>
+  </data>
+  <data name="Song Search" xml:space="preserve">
+    <value>Tìm hợp âm</value>
+  </data>
+  <data name="Sort category by Most Popular ASC Order" xml:space="preserve">
+    <value>Sắp xếp danh mục theo bài phổ biến nhất từ dưới lên</value>
+  </data>
+  <data name="Sort Option" xml:space="preserve">
+    <value>Tùy trọn sắp xếp</value>
+  </data>
+  <data name="Total Amount is" xml:space="preserve">
+    <value>Total Amount is</value>
+  </data>
+  <data name="Added" xml:space="preserve">
+    <value>Được thêm vào</value>
+  </data>
+  <data name="Browse" xml:space="preserve">
+    <value>Xem bài hát trong danh mục</value>
+  </data>
+  <data name="By" xml:space="preserve">
+    <value>Viết bởi</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Danh mục</value>
+  </data>
+  <data name="Choose Display" xml:space="preserve">
+    <value>Chọn hiển thị</value>
+  </data>
+  <data name="Displaying" xml:space="preserve">
+    <value>Hiển thị</value>
+  </data>
+  <data name="Featured" xml:space="preserve">
+    <value>Bài hát tiêu biểu</value>
+  </data>
+  <data name="Grid 2 Columns" xml:space="preserve">
+    <value>Theo 2 cột</value>
+  </data>
+  <data name="Grid 3 Columns" xml:space="preserve">
+    <value>Theo 3 cột</value>
+  </data>
+  <data name="Highest Rated" xml:space="preserve">
+    <value>Đánh giá cao nhất</value>
+  </data>
+  <data name="Hits" xml:space="preserve">
+    <value>Số lần xem</value>
+  </data>
+  <data name="Keywords" xml:space="preserve">
+    <value>Từ khóa</value>
+  </data>
+  <data name="My Song Quick View" xml:space="preserve">
+    <value>Mục xem nhanh của bạn</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Tên</value>
+  </data>
+  <data name="Newest" xml:space="preserve">
+    <value>Mới nhất</value>
+  </data>
+  <data name="Newest Songs" xml:space="preserve">
+    <value>Bài hát mới nhất</value>
+  </data>
+  <data name="Pagesize" xml:space="preserve">
+    <value>Tổng số bài trên trang</value>
+  </data>
+  <data name="Rating" xml:space="preserve">
+    <value>Đánh giá</value>
+  </data>
+  <data name="Records Page" xml:space="preserve">
+    <value>Bản bài trên trang</value>
+  </data>
+  <data name="Records per page" xml:space="preserve">
+    <value>bài trên một trang</value>
+  </data>
+  <data name="Rows" xml:space="preserve">
+    <value>Hàng</value>
+  </data>
+  <data name="Sort by 60 Highest Rated" xml:space="preserve">
+    <value>Sắp xếp theo 60 bài hát được đánh giá cao nhất</value>
+  </data>
+  <data name="Sort by 60 Highest Rated songs ASC order" xml:space="preserve">
+    <value>Sắp xếp theo 60 bài hát được đánh giá cao nhất từ dưới lên</value>
+  </data>
+  <data name="Sort by 60 Highest Rated songs DESC order" xml:space="preserve">
+    <value>Sắp xếp theo 60 bài hát được đánh giá cao nhất từ trên suống</value>
+  </data>
+  <data name="Sort by 60 Most Popular" xml:space="preserve">
+    <value>Sắp xếp theo 60 bài hát được ưa thich nhất</value>
+  </data>
+  <data name="Sort by 60 Most Popular ASC order" xml:space="preserve">
+    <value>Sắp xếp theo 60 bài hát được ưa thich nhất từ dưới lên</value>
+  </data>
+  <data name="Sort by 60 Most Popular DESC order" xml:space="preserve">
+    <value>Sắp xếp theo 60 bài hát được ưa thich nhất từ trên suống</value>
+  </data>
+  <data name="Sort by 60 Newest song ASC order" xml:space="preserve">
+    <value>Sắp xếp theo 60 bài hát mới nhất từ dưới lên</value>
+  </data>
+  <data name="Sort by 60 Newest songs" xml:space="preserve">
+    <value>Sắp xếp theo 60 bài hát mới nhất</value>
+  </data>
+  <data name="Sort by 60 Newest songs DESC order" xml:space="preserve">
+    <value>Sắp xếp theo 60 bài hát mới nhất từ trên suống</value>
+  </data>
+  <data name="Sort by highest rated" xml:space="preserve">
+    <value>Sắp xếp theo những bài hát được đánh giá cao nhất</value>
+  </data>
+  <data name="Sort by highest rated ASC order" xml:space="preserve">
+    <value>Sắp xếp theo những bài hát được đánh giá cao nhất từ dưới lên</value>
+  </data>
+  <data name="Sort by highest rated DESC order" xml:space="preserve">
+    <value>Sắp xếp theo những bài hát được đánh giá cao nhất từ trên suống</value>
+  </data>
+  <data name="Sort by Most Popular" xml:space="preserve">
+    <value>Sắp xếp theo bài hát được ưa thích nhất</value>
+  </data>
+  <data name="Sort by Most Popular ASC order" xml:space="preserve">
+    <value>Sắp xếp theo những bài hát ưa thích nhất từ dưới lên</value>
+  </data>
+  <data name="Sort by Most Popular DESC order" xml:space="preserve">
+    <value>Sắp xếp theo những bài hát ưa thích nhất từ trên suống</value>
+  </data>
+  <data name="Sort by name" xml:space="preserve">
+    <value>Sắp xếp theo tên bài hát</value>
+  </data>
+  <data name="Sort by name ASC order" xml:space="preserve">
+    <value>Sắp xếp theo tên bài hát từ dưới lên</value>
+  </data>
+  <data name="Sort by name DESC order" xml:space="preserve">
+    <value>Sắp xếp theo tên bài hát từ trên suống</value>
+  </data>
+  <data name="Sort by newest songs" xml:space="preserve">
+    <value>Sắp xếp theo những bài hát mới nhất</value>
+  </data>
+  <data name="Sort category by highest rated" xml:space="preserve">
+    <value>Sắp xếp danh mục theo bài được đánh giá cao nhất</value>
+  </data>
+  <data name="Sort category by highest rated ASC order" xml:space="preserve">
+    <value>Sắp xếp danh mục theo bài được đánh giá cao nhất từ dưới lên</value>
+  </data>
+  <data name="Sort category by highest rated DESC order" xml:space="preserve">
+    <value>Sắp xếp danh mục theo bài được đánh giá cao nhất từ trên suống</value>
+  </data>
+  <data name="Sort category by Most Popular" xml:space="preserve">
+    <value>Săp xép danh mục theo bài hát phổ biến</value>
+  </data>
+  <data name="Sort category by Most Popular DESC Order" xml:space="preserve">
+    <value>Sắp xếp danh mục theo bài phổ biến nhất từ trên suống</value>
+  </data>
+  <data name="Sort category by name" xml:space="preserve">
+    <value>Sắp xếp danh mục theo bài hát theo tên</value>
+  </data>
+  <data name="Sort category by newest song ASC order" xml:space="preserve">
+    <value>Sắp xếp danh mục theo bài hát mới nhất từ dưới lên</value>
+  </data>
+  <data name="Sort category by newest song DESC order" xml:space="preserve">
+    <value>Sắp xếp danh mục theo bài hát mới nhất từ trên suống</value>
+  </data>
+  <data name="Sort category by newest songs" xml:space="preserve">
+    <value>Sắp xếp danh mục theo bài hát mới nhất</value>
+  </data>
+  <data name="Sort song by name ASC order" xml:space="preserve">
+    <value>Sắp xếp danh mục theo bài hát theo tên từ dưới lên</value>
+  </data>
+  <data name="Sort song by name DESC order" xml:space="preserve">
+    <value>Sắp xếp danh mục theo bài hát theo tên từ trên suống</value>
+  </data>
+  <data name="Top 15 Song" xml:space="preserve">
+    <value>15 bài hát đứng đầu</value>
+  </data>
+  <data name="Top Songs" xml:space="preserve">
+    <value>Bài hát đứng đầu</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Xem bài hát</value>
+  </data>
+  <data name="Votes" xml:space="preserve">
+    <value>bầu trọn</value>
+  </data>
+  <data name="Admin Login" xml:space="preserve">
+    <value>Đăng nhập vào quản trị</value>
+  </data>
+  <data name="Browse Article Categories" xml:space="preserve">
+    <value>Bài viết theo chủ đề</value>
+  </data>
+  <data name="Browse Members" xml:space="preserve">
+    <value>Danh sách thành viên</value>
+  </data>
+  <data name="Events Calendar" xml:space="preserve">
+    <value>Sự kiện</value>
+  </data>
+  <data name="Highest Rated Songs" xml:space="preserve">
+    <value>Những bài hát đánh giá cao nhất</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Trang chủ</value>
+  </data>
+  <data name="Most Popular Songs" xml:space="preserve">
+    <value>Những bài hát yêu thích nhất</value>
+  </data>
+  <data name="My Account" xml:space="preserve">
+    <value>Tài khoản của bạn</value>
+  </data>
+  <data name="My Friends List" xml:space="preserve">
+    <value>Danh sách bạn bè</value>
+  </data>
+  <data name="My PM Inbox" xml:space="preserve">
+    <value>Tin nhắn của bạn</value>
+  </data>
+  <data name="My Song" xml:space="preserve">
+    <value>Bài hát yêu thíc của bạn</value>
+  </data>
+  <data name="Publish an Article" xml:space="preserve">
+    <value>Thêm bài viết mới</value>
+  </data>
+  <data name="Submit a Song" xml:space="preserve">
+    <value>Thêm hợp âm bài hát mới</value>
+  </data>
+  <data name="Return to top" xml:space="preserve">
+    <value>Về đầu trang</value>
+  </data>
+  <data name="Return to top of the page" xml:space="preserve">
+    <value>Trở về đầu trang</value>
+  </data>
+</root>
