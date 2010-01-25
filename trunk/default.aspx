@@ -1,8 +1,8 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/SiteTemplate.master" EnableViewState="false" AutoEventWireup="true" CodeFile="default.aspx.cs" Inherits="_default" Title="Untitled Page" %>
 <%@ Register TagPrefix="ucl" TagName="alphaletter" Src="Control/alphaletter.ascx" %>
 <%@ Register TagPrefix="ucl" TagName="searchtab" Src="Control/searchtab.ascx" %>
-<%@ Register TagPrefix="ucl" TagName="recipeoftheday" Src="Control/lyricoftheday.ascx" %>
-<%@ Register TagPrefix="ucl" TagName="Controllastviewedrecipe" Src="Control/lastviewedrecipe.ascx" %>
+<%@ Register TagPrefix="ucl" TagName="lyricoftheday" Src="Control/lyricoftheday.ascx" %>
+<%@ Register TagPrefix="ucl" TagName="Controllastviewedlyric" Src="Control/lastviewedlyric.ascx" %>
 <%@ Register TagPrefix="ucl" TagName="newestarticle" Src="Control/newestarticle.ascx" %>
 <%@ Register TagPrefix="ucl" TagName="sidemenu" Src="Control/sidemenu.ascx" %>
 <%@ Register TagPrefix="ucl" TagName="articategorylistsidemenu" Src="Control/articategorylistsidemenu.ascx" %>
@@ -62,8 +62,8 @@
       <div style="clear:both; margin-top: 16px;"></div>
      <!--Begin Today and last 8 hours Lyric block--> 
       <div style="margin-left: 50px; margin-right: 50px; width: auto;">
-    <ucl:recipeoftheday id="recday" runat="server"></ucl:recipeoftheday>
-    <ucl:Controllastviewedrecipe id="lastviewed" runat="server"></ucl:Controllastviewedrecipe>
+    <ucl:lyricoftheday id="recday" runat="server"></ucl:lyricoftheday>
+    <ucl:Controllastviewedlyric id="lastviewed" runat="server"></ucl:Controllastviewedlyric>
       </div>
        <!--End Today and last 8 hours Lyric block---> 
 </asp:Content>

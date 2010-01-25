@@ -25,7 +25,7 @@ namespace VGuitar.BL.Providers.Lyrics
         {
             ExtendedCollection<Lyric> list = new ExtendedCollection<Lyric>();
 
-            string Key = "Ethnic_RecipeCategory";
+            string Key = "Ethnic_LyricCategory";
           
             if (Caching.Cache[Key] != null)
             {

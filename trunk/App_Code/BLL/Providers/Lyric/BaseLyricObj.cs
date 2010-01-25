@@ -16,9 +16,9 @@ namespace VGuitar.BL
     public abstract class BaseLyricObj : Lyric, IRepository
     {
         #region class members
-            public virtual int Add(Lyric recipe) { return 0; } //Insert to database
-            public virtual int Update(Lyric recipe) { return 0; } //Update to database
-            public virtual int Delete(Lyric recipe) { return 0; } //Delete from database
+            public virtual int Add(Lyric lyric) { return 0; } //Insert to database
+            public virtual int Update(Lyric lyric) { return 0; } //Update to database
+            public virtual int Delete(Lyric lyric) { return 0; } //Delete from database
             public virtual int AddCategory(Lyric category) { return 0; } //Insert to database
             public virtual int UpdateCategory(Lyric category) { return 0; } //Update to database
             public virtual int DeleteCategory(Lyric category) { return 0; } //Delete from database

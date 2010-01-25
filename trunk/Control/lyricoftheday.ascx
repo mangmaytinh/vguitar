@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="lyricoftheday.ascx.cs" Inherits="lyricoftheday" EnableViewState="false"%>
   <div class="hpleft">
-<span class="corange5">Hợp âm trong ngày</span>
+<span class="corange5">Bài hát trong ngày</span>
 <br />
 <asp:Label cssClass="cmaron12" runat="server" id="lbrecname" />
 <br />
