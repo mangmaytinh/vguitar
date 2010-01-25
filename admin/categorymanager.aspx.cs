@@ -60,14 +60,14 @@ public partial class admin_categorymanager : BasePageAdmin
     //Handles update comment
     public void Update_Category(Object s, EventArgs e)
     {
-        RecipeRepository Category = new RecipeRepository();
+        LyricRepository Category = new LyricRepository();
 
         Category.CatID = int.Parse(Request.Form["CategoryID"]);
         Category.Category = Request.Form["CategoryName"];
 
-        Caching.PurgeCacheItems("MainCourse_RecipeCategory");
-        Caching.PurgeCacheItems("Ethnic_RecipeCategory");
-        Caching.PurgeCacheItems("RecipeCategory_SideMenu");
+        Caching.PurgeCacheItems("MainCourse_LyricCategory");
+        Caching.PurgeCacheItems("Ethnic_LyricCategory");
+        Caching.PurgeCacheItems("MainCourse_LyricCategory");
         Caching.PurgeCacheItems("Submission_RecipeCategory");
 
         //Notify user if error occured.
@@ -85,13 +85,13 @@ public partial class admin_categorymanager : BasePageAdmin
     //Handle the category delete
     public void Delete_Category(Object s, EventArgs e)
     {
-        RecipeRepository Category = new RecipeRepository();
+        LyricRepository Category = new LyricRepository();
 
         Category.CatID = int.Parse(Request.Form["CategoryID"]);
 
-        Caching.PurgeCacheItems("MainCourse_RecipeCategory");
-        Caching.PurgeCacheItems("Ethnic_RecipeCategory");
-        Caching.PurgeCacheItems("RecipeCategory_SideMenu");
+        Caching.PurgeCacheItems("MainCourse_LyricCategory");
+        Caching.PurgeCacheItems("Ethnic_LyricCategory");
+        Caching.PurgeCacheItems("MainCourse_LyricCategory");
         Caching.PurgeCacheItems("Submission_RecipeCategory");
 
         //Notify user if error occured.
@@ -110,14 +110,14 @@ public partial class admin_categorymanager : BasePageAdmin
     //Handle add new category
     public void Add_Category(Object s, EventArgs e)
     {
-        RecipeRepository Category = new RecipeRepository();
+        LyricRepository Category = new LyricRepository();
 
         Category.Category = Request.Form["CategoryName"];
         Category.CatGroupID = int.Parse(Request.Form["GroupID"]);
 
-        Caching.PurgeCacheItems("MainCourse_RecipeCategory");
-        Caching.PurgeCacheItems("Ethnic_RecipeCategory");
-        Caching.PurgeCacheItems("RecipeCategory_SideMenu");
+        Caching.PurgeCacheItems("MainCourse_LyricCategory");
+        Caching.PurgeCacheItems("Ethnic_LyricCategory");
+        Caching.PurgeCacheItems("MainCourse_LyricCategory");
         Caching.PurgeCacheItems("Submission_RecipeCategory");
 
         //Notify user if error occured.

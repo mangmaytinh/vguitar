@@ -55,7 +55,7 @@ namespace VGuitar.BL.Providers.Lyrics
         {
            ExtendedCollection<Lyric> list = new ExtendedCollection<Lyric>();
 
-           string Key = "Last5_RecipePublishedByUser_" + UID;
+           string Key = "Last5_LyricPublishedByUser_" + UID;
 
            if (Caching.Cache[Key] != null)
            {

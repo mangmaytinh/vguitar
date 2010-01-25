@@ -28,7 +28,7 @@ namespace VGuitar.BL
     /// </summary>
     public static class ImageUploadManager
     {
-        public static void UploadRecipeImage(RecipeRepository Lyric, PlaceHolder ph, string directory, int maxsize, bool IsEdit)
+        public static void UploadRecipeImage(LyricRepository Lyric, PlaceHolder ph, string directory, int maxsize, bool IsEdit)
         {
             FileUpload ImageUpload = (FileUpload)(ph.FindControl("RecipeImageFileUpload"));
 

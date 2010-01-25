@@ -91,11 +91,11 @@ public partial class admin_viewing : BasePageAdmin
     {
         ID = (int)Util.Val(Request.QueryString["id"]);
 
-        Caching.PurgeCacheItems("MainCourse_RecipeCategory");
-        Caching.PurgeCacheItems("Ethnic_RecipeCategory");
-        Caching.PurgeCacheItems("RecipeCategory_SideMenu");
-        Caching.PurgeCacheItems("Newest_RecipesSideMenu_");
-        Caching.PurgeCacheItems("Last5_RecipePublishedByUser_" + UserID);
+        Caching.PurgeCacheItems("MainCourse_LyricCategory");
+        Caching.PurgeCacheItems("Ethnic_LyricCategory");
+        Caching.PurgeCacheItems("MainCourse_LyricCategory");
+        Caching.PurgeCacheItems("Newest_LyricsSideMenu_");
+        Caching.PurgeCacheItems("Last5_LyricPublishedByUser_" + UserID);
 
         Blogic.ActionProcedureDataProvider.AdminApproveLyric(ID);
 

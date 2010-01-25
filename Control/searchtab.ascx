@@ -8,9 +8,9 @@
 <div id="basic" class="tbcont">
 <div style="padding-top: 5px; color: #000;">
 <img src="images/search.gif" border="0" alt="Search recipe" align="absmiddle" />
-<input type="text" name="find" id="find" class="textboxsearch" size="20" value="<%$ Resources:lang, Find %>" onfocus="if(this.value=='Find...')value='';" onblur="if(this.value=='')value='Find...';" runat="server" /> <%=Resources.lang.In %> 
+<input type="text" name="find" id="find" class="textboxsearch" size="40" value="Từ khóa..." onfocus="if(this.value=='Từ khóa...')value='';" onblur="if(this.value=='')value='Từ khóa...';" runat="server" /> <%=Resources.lang.In %> 
 <asp:dropdownlist id="SDropName" runat="server" cssClass="ddlsearch" AutoPostBack="false"></asp:dropdownlist>
-<asp:Button ID="Sbuton" runat="server" cssClass="submitadmin" OnClick="SearchButton_Click" Text="Search" />
+<asp:Button ID="Sbuton" runat="server" cssClass="submitadmin" OnClick="SearchButton_Click" Text="Bắt đầu tìm" />
 </div>
 </div>
 </div>

@@ -63,16 +63,16 @@ public partial class admin_editing : BasePageAdmin
 
     public void Update_Recipe(object sender, EventArgs e)
     {
-        RecipeRepository Lyric = new RecipeRepository();
+        LyricRepository lyric = new LyricRepository();
 
-        Lyric.UID = int.Parse(Request.Form["Userid"]);
-        Lyric.ID = (int)Util.Val(Request.QueryString["id"]);
-        Lyric.LyricName = Request.Form["Name"];
-        Lyric.Author = Request.Form["Author"];
-        Lyric.CatID = int.Parse(Request.Form["CategoryID"]);
-        Lyric.Ingredients = Request.Form["Ingredients"];
-        Lyric.Instructions = Request.Form["Instructions"];
-        Lyric.Hits = int.Parse(Request.Form["Hits"]);
+        lyric.UID = int.Parse(Request.Form["Userid"]);
+        lyric.ID = (int)Util.Val(Request.QueryString["id"]);
+        lyric.LyricName = Request.Form["Name"];
+        lyric.Author = Request.Form["Author"];
+        lyric.CatID = int.Parse(Request.Form["CategoryID"]);
+        lyric.Ingredients = Request.Form["Ingredients"];
+        lyric.Instructions = Request.Form["Instructions"];
+        lyric.Hits = int.Parse(Request.Form["Hits"]);
 
         if (RecipeImageFileUpload.HasFile)
         {
@@ -98,18 +98,18 @@ public partial class admin_editing : BasePageAdmin
             }
         }
 
-        ImageUploadManager.UploadRecipeImage(Lyric, PlaceHolder1, GetLyricImage.ImagePath, constant.RecipeImageMaxSize, true);
+        ImageUploadManager.UploadRecipeImage(lyric, PlaceHolder1, GetLyricImage.ImagePath, constant.RecipeImageMaxSize, true);
 
-        if (Lyric.Update(Lyric) != 0)
+        if (lyric.Update(lyric) != 0)
         {
             JSLiteral.Text = Util.JSProcessingErrorAlert;
             return;
         }
 
         string strURLRedirect;
-        strURLRedirect = "confirmdel.aspx?catname=" + Lyric.LyricName + "&mode=update";
+        strURLRedirect = "confirmdel.aspx?catname=" + lyric.LyricName + "&mode=update";
 
-        Lyric = null;
+        lyric = null;
 
         Response.Redirect(strURLRedirect);
 

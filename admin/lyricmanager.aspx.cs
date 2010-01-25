@@ -596,12 +596,12 @@ public partial class admin_lyricmanager : BasePageAdmin
             #endregion
 
             //Refresh cached data
-            Caching.PurgeCacheItems("MainCourse_RecipeCategory");
-            Caching.PurgeCacheItems("Ethnic_RecipeCategory");
-            Caching.PurgeCacheItems("RecipeCategory_SideMenu");
-            Caching.PurgeCacheItems("Newest_RecipesSideMenu_");
+            Caching.PurgeCacheItems("MainCourse_LyricCategory");
+            Caching.PurgeCacheItems("Ethnic_LyricCategory");
+            Caching.PurgeCacheItems("MainCourse_LyricCategory");
+            Caching.PurgeCacheItems("Newest_LyricsSideMenu_");
 
-            RecipeRepository Lyric = new RecipeRepository();
+            LyricRepository Lyric = new LyricRepository();
 
             Lyric.ID = int.Parse(iIdNumber2.Text);
 

@@ -84,41 +84,41 @@ public partial class editlyric : BasePage
     {
         if (Page.IsValid && Authentication.IsUserAuthenticated)
         {
-            RecipeRepository Lyric = new RecipeRepository();
+            LyricRepository lyric = new LyricRepository();
 
-            Lyric.UID = UserIdentity.UserID;
-            Lyric.ID = (int)Util.Val(Request.QueryString["id"]);
-            Lyric.LyricName = Util.FormatTextForInput(Request.Form[Name.UniqueID]);
-            Lyric.CatID = int.Parse(Request.Form[CategoryID.UniqueID]);
-            Lyric.Ingredients = Request.Form[Ingredients.UniqueID];
-            Lyric.Instructions = Request.Form[Instructions.UniqueID];
-            Lyric.Hits = int.Parse(Request.Form[Hits.UniqueID]);
+            lyric.UID = UserIdentity.UserID;
+            lyric.ID = (int)Util.Val(Request.QueryString["id"]);
+            lyric.LyricName = Util.FormatTextForInput(Request.Form[Name.UniqueID]);
+            lyric.CatID = int.Parse(Request.Form[CategoryID.UniqueID]);
+            lyric.Ingredients = Request.Form[Ingredients.UniqueID];
+            lyric.Instructions = Request.Form[Instructions.UniqueID];
+            lyric.Hits = int.Parse(Request.Form[Hits.UniqueID]);
 
             #region Form Input Validator
             //Validate for empty recipe name
-            if (Lyric.LyricName.Length == 0)
+            if (lyric.LyricName.Length == 0)
             {
-                lbvalenght.Text = "<br>Error: Lyric Name is empty, please enter a recipe name.";
+                lbvalenght.Text = "<br>Error: lyric Name is empty, please enter a recipe name.";
                 lbvalenght.Visible = true;
                 return;
             }
             //Validate for empty ingredients
-            if (Lyric.Ingredients.Length == 0)
+            if (lyric.Ingredients.Length == 0)
             {
                 lbvalenght.Text = "<br>Error: Ingredients is empty, please enter an ingredients.";
                 lbvalenght.Visible = true;
                 return;
             }
             //Validate for empty instruction
-            if (Lyric.Instructions.Length == 0)
+            if (lyric.Instructions.Length == 0)
             {
                 lbvalenght.Text = "<br>Error: Instructions is empty, please enter an instruction.";
                 lbvalenght.Visible = true;
                 return;
             }
 
-            //Lyric name maximum of 50 char allowed
-            if (Lyric.LyricName.Length > 50)
+            //lyric name maximum of 50 char allowed
+            if (lyric.LyricName.Length > 50)
             {
                 lbvalenght.Text = "<br>Error: Lyric Name is too long. Max of 50 characters.";
                 lbvalenght.Visible = true;
@@ -164,21 +164,21 @@ public partial class editlyric : BasePage
                 }
             }
 
-            ImageUploadManager.UploadRecipeImage(Lyric, PlaceHolder1, GetLyricImage.ImagePathDetail, constant.RecipeImageMaxSize, true);
+            ImageUploadManager.UploadRecipeImage(lyric, PlaceHolder1, GetLyricImage.ImagePathDetail, constant.RecipeImageMaxSize, true);
 
             //Refresh cache
-            Caching.PurgeCacheItems("MainCourse_RecipeCategory");
-            Caching.PurgeCacheItems("Ethnic_RecipeCategory");
-            Caching.PurgeCacheItems("RecipeCategory_SideMenu");
-            Caching.PurgeCacheItems("Newest_RecipesSideMenu_");
+            Caching.PurgeCacheItems("MainCourse_LyricCategory");
+            Caching.PurgeCacheItems("Ethnic_LyricCategory");
+            Caching.PurgeCacheItems("MainCourse_LyricCategory");
+            Caching.PurgeCacheItems("Newest_LyricsSideMenu_");
 
-            if (Lyric.Update(Lyric) != 0)
+            if (lyric.Update(lyric) != 0)
             {
                 JSLiteral.Text = Util.JSProcessingErrorAlert;
                 return;
             }
 
-            Lyric = null;
+            lyric = null;
 
             Response.Redirect("confirmaddeditlyric.aspx?mode=Updated&recipename=" + Request.Form[Name.UniqueID] + "&id=" + int.Parse(Request.QueryString["id"]));
         }

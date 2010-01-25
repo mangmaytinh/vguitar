@@ -6,7 +6,7 @@
 <div class="headerright">
 <div class="headerrightmenu">
 <span class="content2">
-<a class="dt" title="Giới thiệu" href="http://www.myasp-net.com/index.aspx?tabindex=1">Giới thiệu</a>&nbsp;&#x2022;&nbsp;<a class="dt" title="Website feedback" href="http://www.myasp-net.com/index.aspx?tabindex=6">Liên hệ</a>&nbsp;&#x2022;&nbsp;<a class="dt" title="Site Map" href="http://www.ex-designz.net/resources.asp">Sơ đồ website</a>&nbsp;&#x2022;&nbsp;<a class="dt" title="Web services" href="http://thlb.biz">Thiết kế</a>
+<a class="dt" title="Giới thiệu" href="http://thlb.biz">Giới thiệu</a>&nbsp;&#x2022;&nbsp;<a class="dt" title="Liên hệ" href="http://thlb.biz">Liên hệ</a>&nbsp;&#x2022;&nbsp;<a class="dt" title="Sơ đồ web" href="http://thlb.biz">Sơ đồ website</a>&nbsp;&#x2022;&nbsp;<a class="dt" title="Web services" href="http://thlb.biz">Thiết kế</a>
 </span>
 </div>
 <div class="headerrightdatetime"><span class="chdate"><%=DateTime.Now.ToString("f")%></span></div>

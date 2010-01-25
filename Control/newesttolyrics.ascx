@@ -8,7 +8,7 @@
 <div class="contentdis5">
 <asp:Label runat="server" id="lblcounter" CssClass="content2" EnableViewState="false" />
 <br />
-<asp:Repeater id="MyCookBookSideMenuRepeater" runat="server" EnableViewState="false">
+<asp:Repeater id="MyFavoriteSideMenuRepeater" runat="server" EnableViewState="false">
    <ItemTemplate>
 <div style="margin-top: 3px; margin-bottom: 3px;">
 <span class="cyel">&raquo;</span>&nbsp;<a class="content12" title="View <%# Eval("LyricName") %> recipe" onmouseover="Tip('<b>Tên bài hát:</b> <%# Eval("LyricName") %><br><b>Người đăng:</b> <%# Eval("Author") %><br><b>Danh mục:</b> <%# Eval("Category") %><br><b>Số lần xem:</b> (<%# Eval("Hits") %>)<br><b>Đánh giá:</b> (<%# Eval("Rating") %>)<br><b>Ý kiến:</b> (<%# Eval("Comments") %>)<br><b>Ngày đăng bài:</b> <%# Eval("Date", "{0:M/d/yyyy}")%><br><b>Lời:</b><br><%# Eval("Comments") %>, BGCOLOR, '#FFFBE1', BORDERCOLOR, '#acc6db')" onmouseout="UnTip()" href='<%# Eval("RecipeID", "lyricdetail.aspx?id={0}") %>'><%# Eval("LyricName")%></a>
@@ -42,7 +42,7 @@
 </div>
 <div class="contentdisplaygreen">
 <div class="contentbggreen">
-<asp:Repeater id="RecipeNew" runat="server" OnItemDataBound="RecipeNew_ItemDataBound" EnableViewState="false">
+<asp:Repeater id="LyricNew" runat="server" OnItemDataBound="RecipeNew_ItemDataBound" EnableViewState="false">
    <ItemTemplate>
 <div class="dcnt2">
 <span class="arrowgr">&raquo;</span>
@@ -63,7 +63,7 @@
 </div>
 <div class="contentdisplaygreen">
 <div class="contentbggreen">
-<asp:Repeater id="TopRecipe" runat="server" OnItemDataBound="TopRecipe_ItemDataBound" EnableViewState="false">
+<asp:Repeater id="TopLyric" runat="server" OnItemDataBound="TopRecipe_ItemDataBound" EnableViewState="false">
    <ItemTemplate>
 <div class="dcnt2">
 <asp:Label ID="lbseqnumber" cssClass="cyel2" runat="server" EnableViewState="false" /> <a class="dt" onmouseover="Tip('<b>Danh mục: </b><%# Eval("Category") %><br><b>Lượt xem: </b><%# Eval("Hits") %><br><b>Ảnh:</b><br><img src=&quot;LyricImageUpload/<%# Eval("LyricImage")%>&quot; width=&quot;150&quot; height=&quot;120&quot;>', BGCOLOR, '#FFFBE1', BORDERCOLOR, '#acc6db')" onmouseout="UnTip()" href='<%# Eval("ID", "lyricdetail.aspx?id={0}") %>'>
