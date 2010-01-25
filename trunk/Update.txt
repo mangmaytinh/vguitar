@@ -1,0 +1,63 @@
+Rename file
+addrecipe.aspx - > addlyric.aspx
+
+confirmaddeditrecipe.aspx -> confirmaddeditlyric.aspx
+confirmcookbookdelete.aspx - confirmfavoritedelete.aspx
+editrecipe.aspx - editlyric.aspx
+emailrecipe.aspx - emaillyric.aspx
+findallrecipebyauthor.aspx - findalllyricbyauthor.aspx
+
+findallrecipecommentedbyuser.aspx - findalllyriccommentedbyuser.aspx
+getrecipeimageroundedcorner.aspx - getlyricimageroundedcorner.aspx
+newrecipexml.aspx - newlyricxml.aspx
+popupviewuserssavedrecipepublishedbyme.aspx - popupviewuserssavedlyricpublishedbyme.aspx
+printrecipe.aspx - printlyric.aspx
+
+recipedetail.aspx - lyricdetail.aspx
+recipename.aspx - lyricname.aspx
+mycookbook.aspx - myfavorite.aspx
+searchrecipe.aspx - searchlyric.aspx
+toprecipexml.aspx - toplyricxml.aspx
+
+2) Admin rename file
+popupviewusercookbook.aspx -popupviewuserfavorite.aspx
+recipemanager.aspx - lyricmanager.aspx
+popuplast20userswhosumittedrecipe.aspx - popuplast20userswhosumittedlyric.aspx
+popuplast25userswhoaddedrecipeincookbook.aspx - popuplast25userswhoaddedrecipeinfavorite.aspx
+
+3) Rename Namespace
+
+4.Rename Usercontrol file
+
+newesttoprecipes.ascx - newesttolyrics.ascx
+recipeoftheday.ascx - lyricoftheday.ascx
+
+
+
+-------Edit code-------
+
+Recipe.cs - Lyric.cs
+
+RecipeImage - LyricImage
+
+GetRecipeImage.cs - GetLyricImage.cs
+
+GetRecipeImageUserEdit - GetLyricImageUserEdit
+
+ProvderRandomRecipe.cs - ProvderRandomLyric.cs
+
+BaseRecipeObj.cs BaseLyricObj.cs
+
+AdminRecipeCategoryProvider - AdminLyricCategoryProvider
+
+EthnicRecipeCategoryProvider - EthnicLyricCategoryProvider
+
+ProviderGetAllRecipebyAuthor.cs - ProviderGetAllLyricbyAuthor.cs
+ProviderGetAllRecipeCommentedbyUser.cs - ProviderGetAllLyricCommentedbyUser.cs
+
+
+---------------
+
+Cookie edit
+
+XDWRUserInfo - XDWRUserInfo
