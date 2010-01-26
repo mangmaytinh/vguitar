@@ -1,6 +1,6 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="lastviewedrecipe.ascx.cs" Inherits="Controllastviewedrecipe" EnableViewState="false"%>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="lastviewedlyric.ascx.cs" Inherits="Controllastviewedlyric" EnableViewState="false"%>
     <div class="hpright">
-    <span class="hdgr">Những hợp âm được xem cách đây <asp:Label cssClass="hdgr" runat="server" id="lbgethour" /> Giờ</span>
+    <span class="hdgr">Những bài hát được xem cách đây <asp:Label cssClass="hdgr" runat="server" id="lbgethour" /> Giờ</span>
     <br />
     <asp:Repeater id="lastview" runat="server" OnItemDataBound="lastview_ItemDataBound" EnableViewState="false">
    <ItemTemplate>
