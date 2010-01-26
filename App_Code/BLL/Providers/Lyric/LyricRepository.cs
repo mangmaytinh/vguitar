@@ -12,12 +12,12 @@ namespace VGuitar.BL
     /// <summary>
     /// Objects in this class manages Add, Update and Delete Lyric
     /// </summary>
-    public class RecipeRepository : BaseLyricObj
+    public class LyricRepository : BaseLyricObj
     {
         /// <summary>
         /// Default Constructor
         /// </summary>
-        public RecipeRepository()
+        public LyricRepository()
         {
         }
 

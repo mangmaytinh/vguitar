@@ -15,7 +15,7 @@ using VGuitar.BL.Providers.Lyrics;
 using VGuitar.Common;
 using VGuitar.Common.Utilities;
 
-public partial class Controllastviewedrecipe : System.Web.UI.UserControl
+public partial class Controllastviewedlyric : System.Web.UI.UserControl
 {
     protected void Page_Load(object sender, EventArgs e)
     {

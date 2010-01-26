@@ -13,27 +13,27 @@ using VGuitar.Model;
 namespace VGuitar.BL.Providers.Lyrics
 {
     /// <summary>
-    /// Objects in this class manages top right panel random recipe
+    /// Objects in this class manages top right panel random Lyric
     /// </summary>
-    public sealed class RandomRecipe : BaseLyricObj
+    public sealed class RandomLyric : BaseLyricObj
     {
-        private static readonly RandomRecipe Instance = new RandomRecipe();
+        private static readonly RandomLyric Instance = new RandomLyric();
 
-        static RandomRecipe()
+        static RandomLyric()
         {
         }
 
-        RandomRecipe()
+        RandomLyric()
         {
         }
 
-        public static RandomRecipe GetInstance()
+        public static RandomLyric GetInstance()
         {
             return Instance;
         }
 
         /// <summary>
-        /// Get recipe name, author, date, hits, rating, ingredients, instructions and other field from the DB matching the Lyric ID provided.
+        /// Get Lyric name, author, date, hits, rating, ingredients, instructions and other field from the DB matching the Lyric ID provided.
         /// </summary>
         public override void FillUp()
         {
