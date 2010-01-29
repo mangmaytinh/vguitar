@@ -1,4 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/SiteTemplate.master" EnableViewState="false" AutoEventWireup="true" CodeFile="category.aspx.cs" Inherits="recipecategory" Title="Untitled Page" %>
+
+<%@ Register Src="Control/categorylistsidemenuEng.ascx" TagName="categorylistsidemenuEng"
+    TagPrefix="uc1" %>
 <%@ Register TagPrefix="ucl" TagName="alphaletter" Src="Control/alphaletter.ascx" %>
 <%@ Register TagPrefix="ucl" TagName="sortoptionlinks" Src="Control/sortoptionlinks.ascx" %>
 <%@ Register TagPrefix="ucl" TagName="categorylistsidemenu" Src="Control/categorylistsidemenu.ascx" %>
@@ -9,6 +12,8 @@
     <ucl:sidemenu id="menu1" runat="server"></ucl:sidemenu>
     <div style="clear: both;"></div>
     <ucl:categorylistsidemenu id="catlistcont" runat="server"></ucl:categorylistsidemenu>
+    <br />
+    <uc1:categorylistsidemenuEng ID="CategorylistsidemenuEng1" runat="server" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
@@ -82,7 +87,7 @@
     <div style="margin-bottom: 10px; border-top: solid 1px #D5E6FF; margin-right: 18px; margin-left: 4px;"></div>
     <div style="clear: both;"></div>
     <!--Begin repeater center content-->
-    <asp:DataList id="RecipeCat" OnItemDataBound="RecipeCatItemDataBound" RepeatDirection="Horizontal" runat="server" EnableViewState="false">
+    <asp:DataList id="LyricCat" OnItemDataBound="RecipeCatItemDataBound" RepeatDirection="Horizontal" runat="server" EnableViewState="false">
           <ItemTemplate>
         <div class="divwrap5">
            <div class="divhd">
@@ -93,7 +98,9 @@
     <div class="divbd">
     <%=Resources.lang.Category %>:&nbsp;<a class="dt2" title="Go to <%# Eval("Category") %> category" href='javascript:void(0)'><%# Eval("Category") %></a>
     <br />
-    <%=Resources.lang.By %>:&nbsp;<img src="images/user-icon.gif" />&nbsp;<a href="findalllyricbyauthor.aspx?author=<%# Eval("Author") %>" onmouseover="Tip('View all recipe submitted by <b><%# Eval("Author") %></b>.', BGCOLOR, '#FFFBE1', BORDERCOLOR, '#acc6db')" onmouseout="UnTip()"><%# Eval("Author") %></a>
+    Tác giả:&nbsp;<img src="images/user-icon.gif" />&nbsp;<a href="findalllyricbyauthor.aspx?author=<%# Eval("Author") %>" onmouseover="Tip('View all recipe submitted by <b><%# Eval("Author") %></b>.', BGCOLOR, '#FFFBE1', BORDERCOLOR, '#acc6db')" onmouseout="UnTip()"><%# Eval("Author") %></a>
+    <br />
+    Người đăng bài:&nbsp;<img src="images/user-icon.gif" />&nbsp;<a href="findalllyricbycreateby.aspx?author=<%# Eval("CreateBy") %>" onmouseover="Tip('Xem tất cả những bài đăng bởi <b><%# Eval("CreateBy") %></b>.', BGCOLOR, '#FFFBE1', BORDERCOLOR, '#acc6db')" onmouseout="UnTip()"><%# Eval("CreateBy") %></a>
     <br />
     <%=Resources.lang.Rating %>:&nbsp;<img src="images/<%# Eval("Rating", "{0:0.0}")%>.gif" align="absmiddle" />&nbsp;(<span class="cgr"><%# Eval("Rating", "{0:0.0}")%></span>) votes <span class="cyel"><%# Eval("NoRates")%></span>
     <br />

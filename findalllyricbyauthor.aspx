@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/SiteTemplate.master" EnableViewState="false" AutoEventWireup="true" CodeFile="findalllyricbyauthor.aspx.cs" Inherits="findalllyricbyauthor" Title="Untitled Page" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/SiteTemplate.master" EnableViewState="false" AutoEventWireup="true" CodeFile="findalllyricbyauthor.aspx.cs" Inherits="findalllyricbyauthor" Title="Untitled Page" %>
 <%@ Register TagPrefix="ucl" TagName="alphaletter" Src="Control/alphaletter.ascx" %>
 <%@ Register TagPrefix="ucl" TagName="sortoptionlinks" Src="Control/sortoptionlinks.ascx" %>
 <%@ Register TagPrefix="ucl" TagName="categorylistsidemenu" Src="Control/categorylistsidemenu.ascx" %>
@@ -15,7 +15,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
     <ucl:searchtab id="searchcont" runat="server"></ucl:searchtab>
     <div style="margin-left: 10px; margin-right: 12px; background-color: #FFF9EC; margin-top: 0px;">
-    &nbsp;&nbsp;<a href="default.aspx" class="dsort" title="Back to recipe homepage">Home</a>&nbsp;<span class="bluearrow">�</span>&nbsp; <span class="content2"><asp:Label cssClass="content2" id="lblcount" runat="server" /></span>
+    &nbsp;&nbsp;<a href="default.aspx" class="dsort" title="Back to recipe homepage">Trang chủ</a>&nbsp;<span class="bluearrow">»</span>&nbsp; <span class="content2"><asp:Label cssClass="content2" id="lblcount" runat="server" /></span>
     <asp:Label cssClass="content2" id="lblsortname" runat="server" Font-Bold="True" />
     </div>
     <div style="padding: 2px; margin-bottom: 14px; margin-top: 12px; margin-left: 16px; margin-right: 26px;">
@@ -41,7 +41,7 @@
     <div style="margin-bottom: 10px; border-top: solid 1px #D5E6FF; margin-right: 18px; margin-left: 4px;"></div>
     <asp:Label cssClass="content2" id="lblNorecordFound" Visible="false" runat="server" Font-Bold="True" />
     <!--Begin repeater center content-->
-    <asp:Repeater id="RecipeCat" OnItemDataBound="RecipeCat_ItemDataBound" runat="server">
+    <asp:Repeater id="LyricCat" OnItemDataBound="RecipeCat_ItemDataBound" runat="server">
           <ItemTemplate>
         <div class="divwrap">
            <div class="divhd">
@@ -50,15 +50,17 @@
     <asp:Label ID="lblpopular" cssClass="hot" runat="server" EnableViewState="false" /> <asp:Image ID="newimg" runat="server" EnableViewState="false" /><asp:Image id="thumbsup" runat="server" AlternateText = "Thumsb up" EnableViewState="false" /> 
     </div> 
     <div class="divbd">
-    Category:&nbsp;<a class="dt2" title="Go to <%# Eval("Category") %> category" href='<%# Eval("CatID", "category.aspx?catid={0}") %>'><%# Eval("Category") %></a>
+    <%=Resources.lang.Category %>:&nbsp;<a class="dt2" title="Go to <%# Eval("Category") %> category" href='<%# Eval("CatID", "category.aspx?catid={0}") %>'><%# Eval("Category") %></a>
     <br />
-    By:&nbsp;<img src="images/user-icon.gif" />&nbsp;<a href="userprofile.aspx?uid=<%# Eval("UID") %>" onmouseover="Tip('View <b><%# Eval("Author") %></b> profile.', BGCOLOR, '#FFFBE1', BORDERCOLOR, '#acc6db')" onmouseout="UnTip()"><%# Eval("Author") %></a>
+    <%=Resources.lang.Author %>:&nbsp;<img src="images/user-icon.gif" />&nbsp;<a href="#" onmouseover="Tip('Xem bài hát của tác giả <b><%# Eval("Author") %></b>.', BGCOLOR, '#FFFBE1', BORDERCOLOR, '#acc6db')" onmouseout="UnTip()"><%# Eval("Author") %></a>    
     <br />
-    Rating:&nbsp;<img src="images/<%# Eval("Rating", "{0:0.0}")%>.gif" align="absmiddle" />&nbsp;(<span class="cgr"><%# Eval("Rating", "{0:0.0}")%></span>) votes <span class="cyel"><%# Eval("NoRates")%></span>
+    <%=Resources.lang.CreateBy %>:&nbsp;<img src="images/user-icon.gif" />&nbsp;<a href="userprofile.aspx?uid=<%# Eval("UID") %>" onmouseover="Tip('Xem hồ sơ của <b><%# Eval("CreateBy") %></b>.', BGCOLOR, '#FFFBE1', BORDERCOLOR, '#acc6db')" onmouseout="UnTip()"><%# Eval("CreateBy") %></a>
     <br />
-    Added: <span class="cyel"><%# CustomDateFormat(Eval("Date"))%></span>
+    <%=Resources.lang.Rating %>:&nbsp;<img src="images/<%# Eval("Rating", "{0:0.0}")%>.gif" align="absmiddle" />&nbsp;(<span class="cgr"><%# Eval("Rating", "{0:0.0}")%></span>) votes <span class="cyel"><%# Eval("NoRates")%></span>
     <br />
-    Hits: <span class="cmaron3"><%# Eval("Hits", "{0:#,###}")%></span>&nbsp;&nbsp;<asp:HyperLink ID="editrecipelink" CssClass="content2" Visible="false" runat="server" EnableViewState="false" />
+    <%=Resources.lang.Added %>: <span class="cyel"><%# CustomDateFormat(Eval("Date"))%></span>
+    <br />
+    <%=Resources.lang.Hits %>: <span class="cmaron3"><%# Eval("Hits", "{0:#,###}")%></span>&nbsp;&nbsp;<asp:HyperLink ID="editrecipelink" CssClass="content2" Visible="false" runat="server" EnableViewState="false" />
         </div>
     </div>
     <div style="margin: 15px;"></div>

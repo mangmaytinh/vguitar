@@ -114,6 +114,10 @@ namespace VGuitar.BL.Providers.Lyrics
                 {
                     item.Ingredients = (string)dr["Ingredients"];
                 }
+                if (dr["CreateBy"] != DBNull.Value)
+                {
+                    item.CreateBy = (string)dr["CreateBy"];
+                }
 
                 list.Add(item);
             }

@@ -15,7 +15,8 @@ public partial class categorylistsidemenu : System.Web.UI.UserControl
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        CategoryList.DataSource = LyricCategoryMenuProvider.GetLyricCategoryMenu();
+        //CategoryList.DataSource = LyricCategoryMenuProvider.GetLyricCategoryMenu();
+        CategoryList.DataSource = MainCourseLyricCategoryProvider.GetMainCourseCategory();
         CategoryList.DataBind();
     }
 }

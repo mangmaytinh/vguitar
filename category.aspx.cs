@@ -101,7 +101,7 @@ public partial class recipecategory : BasePage
 
                 psPageSize = UserFeaturesConfiguration.GetUserPreferredPageSize;
                 PageSize = UserFeaturesConfiguration.GetUserPreferredPageSize;
-                RecipeCat.RepeatColumns = UserFeaturesConfiguration.GetUserPreferredLayout;
+                LyricCat.RepeatColumns = UserFeaturesConfiguration.GetUserPreferredLayout;
                 lbps.Text = " - " + lang.Displaying + " <b>" + psPageSize + "</b> " + lang.Records_per_page;
 
                 ReturnURL = this.Request.Url.PathAndQuery;
@@ -129,7 +129,7 @@ public partial class recipecategory : BasePage
                 pLayout = Utility.PreferredLayout(Layout);
 
                 PageSize = psPageSize;
-                RecipeCat.RepeatColumns = pLayout;
+                LyricCat.RepeatColumns = pLayout;
             }
         }
         else
@@ -152,7 +152,7 @@ public partial class recipecategory : BasePage
             pLayout = Utility.PreferredLayout(Layout);
 
             PageSize = psPageSize;
-            RecipeCat.RepeatColumns = pLayout;
+            LyricCat.RepeatColumns = pLayout;
         }
 
         LyricCategoryProvider GetCategory = LyricCategoryProvider.GetInstance();
@@ -170,8 +170,8 @@ public partial class recipecategory : BasePage
 
         lblRecpage.Text = Pager.GetBottomPagerCounterCustomPaging;
 
-        RecipeCat.DataSource = GetCategory.GetCategories();
-        RecipeCat.DataBind();
+        LyricCat.DataSource = GetCategory.GetCategories();
+        LyricCat.DataBind();
     }
 
     private void GetMetaTitleTagKeywords(string strPageTitle, int iPage)

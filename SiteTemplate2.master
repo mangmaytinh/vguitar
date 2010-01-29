@@ -1,4 +1,4 @@
-<%@ Master Language="C#" AutoEventWireup="true" CodeFile="SiteTemplate2.master.cs" Inherits="SiteTemplate2" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="SiteTemplate2.master.cs" Inherits="SiteTemplate2" %>
 <%@ Register TagPrefix="ucl" TagName="Login" Src="Control/Login.ascx" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -65,18 +65,18 @@ fieldset {background: #ffffff;}
 </table> 
 <div style="margin-top: 20px;"></div>
 <div id="footer">
-        <!--Begin Footer-->
+       <!--Begin Footer-->
         <div class="footerwrap">
         <br />
-        <img src="images/returntop.gif" alt="return to top" align="absmiddle" border="0" /><a class="dt2" title="Return to top of the page" href="#Top">Return to top</a>
+        <img src="images/returntop.gif" alt="return to top" align="absmiddle" border="0" /><a class="dt2" title="Trở về đầu trang" href="#Top">Trở về đầu trang</a>
         <br />
         <span class="content2">
-        Copyright � 2000 - 2009 Ex-designz.net. All rights reserved. Developed By <a class="dt2" title="Website" href="http://www.ex-designz.net">Dexter Zafra - Ex-designz.net</a></span>
+        Copyright © 2000 - 2009 thlb.biz. Phát triển bởi <a class="dt2" title="Website" href="http://thlb.biz">Vina.knightst</a></span>
         <br />
-         <asp:HyperLink id="Powered" cssClass="dt2" ToolTip="Visit myasp-net.com" NavigateURL="http://www.myasp-net.com" runat="server">Powered By Myasp-net XD Portal V3</asp:HyperLink>
+         <asp:HyperLink id="Powered" cssClass="dt2" ToolTip="Visit myasp-net.com" NavigateURL="http://thlb.biz" runat="server">Phát triển bởi Thlb.biz</asp:HyperLink>
          <br /><br />
          </div>
-        <!--End Footer-->  
+        <!--End Footer--> 
   </div>
  </form>
 </body>

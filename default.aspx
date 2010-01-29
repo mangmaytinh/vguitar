@@ -36,12 +36,12 @@
     </div>
     <div style="text-align: center; padding-top: 3px;"><asp:Label cssClass="content2" runat="server" id="lbltotalLyric" />
     </div>
-    <br />
-    <div style="text-align: center;  padding-bottom: 5px;"><span style="font-family: verdana,arial; font-size: 17px; color: #CC3300;"><b>Phân loại hợp âm bài hát theo thể loại</b></span></div>
+    <br />    
     <div class="MainCourseCat">
-    <asp:DataList id="MainCourseCategory" RepeatColumns="3" RepeatDirection="Horizontal" runat="server" HorizontalAlign="Center">
+    <div style="text-align: left;  padding-bottom: 5px;"><span style="font-family: verdana,arial; font-size: 17px; color: #CC3300;"><b>Bài hát Việt Nam</b></span></div>
+    <asp:DataList id="MainCourseCategory" RepeatColumns="5" RepeatDirection="Horizontal" runat="server" HorizontalAlign="Center">
           <ItemTemplate>
-         <div style="margin-left: 60px; margin-top: 3px; margin-bottom: 3px; margin-right: 10px;">  
+         <div style="margin-left: 0px; margin-top: 3px; margin-bottom: 3px; margin-right: 10px;">  
     <span class="bluearrow">&raquo;</span> <a class="catlink" title="Xem tất cả hợp âm trong danh mục  <%# Eval("Category") %> " href='<%# Eval("CatID", "category.aspx?catid={0}") %>'><%# Eval("Category")%></a> <span class="catcount"><i>(<%# Eval("RecordCount")%>)</i></span>
            </div>
           </ItemTemplate>
@@ -49,11 +49,12 @@
       </div>
       <br />
       <div style="clear:both;"></div>
-      <div style="text-align: center;  padding-bottom: 5px;"><span style="font-family: verdana,arial; font-size: 17px; color: #CC3300;"><b>Phân loại hợp âm bài hát theo tác giả, ca sĩ</b></span></div>
+      
     <div class="EthnicCat">
-    <asp:DataList id="EthnicRegionalCat" RepeatColumns="3" RepeatDirection="Horizontal" runat="server" HorizontalAlign="Center">
+    <div style="text-align: left;  padding-bottom: 5px;"><span style="font-family: verdana,arial; font-size: 17px; color: #CC3300;"><b>Bài hát Quốc Tế</b></span></div>
+    <asp:DataList id="EthnicRegionalCat" RepeatColumns="5" RepeatDirection="Horizontal" runat="server" HorizontalAlign="Center">
           <ItemTemplate>
-         <div style="margin-left: 60px; margin-top: 3px; margin-bottom: 3px; margin-right: 10px;">  
+         <div style="margin-left: 0px; margin-top: 3px; margin-bottom: 3px; margin-right: 10px;">  
     <span class="bluearrow">&raquo;</span> <a class="catlink" title="Xem tất cả hợp âm theo danh mục <%# Eval("Category") %>" href='<%# Eval("CatID", "category.aspx?catid={0}") %>'><%# Eval("Category")%></a> <span class="catcount"><i>(<%# Eval("RecordCount")%>)</i></span>
            </div>
           </ItemTemplate>

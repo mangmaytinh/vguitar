@@ -96,6 +96,8 @@ namespace VGuitar.Model
 
         protected string _AuthorName;
 
+        protected string _CreateBy;
+
         protected int _UID;
 
         #endregion
@@ -247,6 +249,12 @@ namespace VGuitar.Model
         {
             get { return _UID; }
             set { _UID = value; }
+        }
+
+        public string CreateBy
+        {
+            get { return _CreateBy; }
+            set { _CreateBy = value; }
         }
         #endregion
     }

@@ -70,10 +70,10 @@ fieldset {background: #ffffff;}
         <!--Begin Footer-->
         <div class="footerwrap">
         <br />
-        <img src="images/returntop.gif" alt="return to top" align="absmiddle" border="0" /><a class="dt2" title="Return to top of the page" href="#Top">Return to top</a>
+        <img src="images/returntop.gif" alt="return to top" align="absmiddle" border="0" /><a class="dt2" title="Trở về đầu trang" href="#Top">Trở về đầu trang</a>
         <br />
         <span class="content2">
-        Copyright © 2000 - 2009 thlb.biz. All rights reserved. Developed By <a class="dt2" title="Website" href="http://thlb.biz">Vina.knightst</a></span>
+        Copyright © 2000 - 2009 thlb.biz. Phát triển bởi <a class="dt2" title="Website" href="http://thlb.biz">Vina.knightst</a></span>
         <br />
          <asp:HyperLink id="Powered" cssClass="dt2" ToolTip="Visit myasp-net.com" NavigateURL="http://thlb.biz" runat="server">Phát triển bởi Thlb.biz</asp:HyperLink>
          <br /><br />
