@@ -99,6 +99,10 @@ namespace VGuitar.BL.Providers.Lyrics
                 {
                     this._HitDate = (DateTime)dr["HIT_DATE"];
                 }
+                if (dr["CreateBy"] != DBNull.Value)
+                {
+                    this._CreateBy = (string)dr["CreateBy"];
+                }
 
                 dr.Close();
                 dr = null;

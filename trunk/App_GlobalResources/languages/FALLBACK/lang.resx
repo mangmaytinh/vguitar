@@ -184,7 +184,7 @@
     <value>Từ khóa</value>
   </data>
   <data name="My Song Quick View" xml:space="preserve">
-    <value>Mục xem nhanh của bạn</value>
+    <value>Mục yêu thích của bạn</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Tên</value>
@@ -356,5 +356,11 @@
   </data>
   <data name="Return to top of the page" xml:space="preserve">
     <value>Trở về đầu trang</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>Tác giả</value>
+  </data>
+  <data name="CreateBy" xml:space="preserve">
+    <value>Tạo bởi</value>
   </data>
 </root>

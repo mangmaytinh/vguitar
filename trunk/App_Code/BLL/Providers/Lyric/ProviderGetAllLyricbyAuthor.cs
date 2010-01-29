@@ -33,9 +33,9 @@ namespace VGuitar.BL.Providers.Lyrics
             return Instance;
         }
 
-        public void Param(string AuthorName, int OrderBy, int SortBy, int PageIndex, int PageSize)
+        public void Param(string Author, int OrderBy, int SortBy, int PageIndex, int PageSize)
         {
-            this._AuthorName = AuthorName;
+            this._Author = Author;
             this._OrderBy = OrderBy;
             this._SortBy = SortBy;
             this._Index = PageIndex;
@@ -61,12 +61,12 @@ namespace VGuitar.BL.Providers.Lyrics
             get
             {
                 //Get data
-                IDataReader dr = Blogic.ActionProcedureDataProvider.GetAllLyricSubmittedByUser(AuthorName, OrderBy, Index, PageSize);
+                IDataReader dr = Blogic.ActionProcedureDataProvider.GetAllLyricSubmittedByAuthor(Author, OrderBy, Index, PageSize);
                 return dr;
             }
         }
 
-        public ExtendedCollection<Lyric> GetAllRecipeByAuthorResult()
+        public ExtendedCollection<Lyric> GetAllLyricsByAuthorResult()
         {
             ExtendedCollection<Lyric> list = new ExtendedCollection<Lyric>();
 
@@ -115,6 +115,10 @@ namespace VGuitar.BL.Providers.Lyrics
                 if (dr["UID"] != DBNull.Value)
                 {
                     item.UID = (int)dr["UID"];
+                }
+                if (dr["CreateBy"] != DBNull.Value)
+                {
+                    item.CreateBy = (string)dr["CreateBy"];
                 }
 
                 list.Add(item);

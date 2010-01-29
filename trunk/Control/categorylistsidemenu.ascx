@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="categorylistsidemenu.ascx.cs" Inherits="categorylistsidemenu" EnableViewState="false"%>
 <!--Begin Display Category List Side Menu-->
 <div class="toproundorange">
-<div class="toproundorangeheader"><span class="content3">Hợp âm theo chủ đề</span></div>
+<div class="toproundorangeheader"><span class="content3">Bài hát Việt</span></div>
 </div>
 <div class="contentdisplayora">
 <div class="contentdis5">

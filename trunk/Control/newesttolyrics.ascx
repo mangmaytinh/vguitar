@@ -11,7 +11,7 @@
 <asp:Repeater id="MyFavoriteSideMenuRepeater" runat="server" EnableViewState="false">
    <ItemTemplate>
 <div style="margin-top: 3px; margin-bottom: 3px;">
-<span class="cyel">&raquo;</span>&nbsp;<a class="content12" title="View <%# Eval("LyricName") %> recipe" onmouseover="Tip('<b>Tên bài hát:</b> <%# Eval("LyricName") %><br><b>Người đăng:</b> <%# Eval("Author") %><br><b>Danh mục:</b> <%# Eval("Category") %><br><b>Số lần xem:</b> (<%# Eval("Hits") %>)<br><b>Đánh giá:</b> (<%# Eval("Rating") %>)<br><b>Ý kiến:</b> (<%# Eval("Comments") %>)<br><b>Ngày đăng bài:</b> <%# Eval("Date", "{0:M/d/yyyy}")%><br><b>Lời:</b><br><%# Eval("Comments") %>, BGCOLOR, '#FFFBE1', BORDERCOLOR, '#acc6db')" onmouseout="UnTip()" href='<%# Eval("RecipeID", "lyricdetail.aspx?id={0}") %>'><%# Eval("LyricName")%></a>
+<span class="cyel">&raquo;</span>&nbsp;<a class="content12" title="Xem bài hát <%# Eval("LyricName") %>" onmouseover="Tip('<b>Tên bài hát:</b> <%# Eval("LyricName") %><br><b>Người đăng:</b> <%# Eval("Author") %><br><b>Danh mục:</b> <%# Eval("Category") %><br><b>Số lần xem:</b> (<%# Eval("Hits") %>)<br><b>Đánh giá:</b> (<%# Eval("Rating") %>)<br><b>Ý kiến:</b> (<%# Eval("Comments") %>)<br><b>Ngày đăng bài:</b> <%# Eval("Date", "{0:M/d/yyyy}")%><br><b>Lời:</b><br><%# Eval("Comments") %>, BGCOLOR, '#FFFBE1', BORDERCOLOR, '#acc6db')" onmouseout="UnTip()" href='<%# Eval("RecipeID", "lyricdetail.aspx?id={0}") %>'><%# Eval("LyricName")%></a>
 </div>
    </ItemTemplate>
   </asp:Repeater>
