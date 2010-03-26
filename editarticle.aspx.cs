@@ -109,19 +109,19 @@ public partial class editarticle : BasePage
                 lbvalenght.Visible = true;
                 return;
             }
-            if (Article.Content.Length > 8000)
-            {
-                lbvalenght.Text = "<br>Error: Content is too long, max of 8000 characters including HTML formatting.";
-                lbvalenght.Visible = true;
-                return;
-            }
+            //if (Article.Content.Length > 8000)
+            //{
+            //    lbvalenght.Text = "<br>Error: Content is too long, max of 8000 characters including HTML formatting.";
+            //    lbvalenght.Visible = true;
+            //    return;
+            //}
             if (Article.Title.Length > 65)
             {
                 lbvalenght.Text = "<br>Error: Title is too long, should not exceed 65 characters.";
                 lbvalenght.Visible = true;
                 return;
             }
-            if (Article.Summary.Length > 350)
+            if (Article.Summary.Length > 800)
             {
                 lbvalenght.Text = "<br>Error: Summary is too long, max of 350 characters.";
                 lbvalenght.Visible = true;

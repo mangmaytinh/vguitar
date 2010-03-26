@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/SiteTemplate2.master" EnableViewState="false" AutoEventWireup="true" CodeFile="articlecategory.aspx.cs" Inherits="articlecategory" Title="Untitled Page" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/SiteTemplate2.master" EnableViewState="false" AutoEventWireup="true" CodeFile="articlecategory.aspx.cs" Inherits="articlecategory" Title="Untitled Page" %>
 <%@ Register TagPrefix="ucl" TagName="rsssidemenu" Src="Control/rsssidemenu.ascx" %>
 <%@ Register TagPrefix="ucl" TagName="sidemenu" Src="Control/sidemenu.ascx" %>
 <%@ Register TagPrefix="ucl" TagName="newestarticle" Src="Control/newestarticle.ascx" %>
@@ -19,7 +19,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
     <ucl:articlesearchtab id="searchcont" runat="server"></ucl:articlesearchtab>
     <div style="margin-left: 10px; margin-right: 12px; background-color: #FFF9EC; margin-top: 0px;">
-    &nbsp;&nbsp;<a href="default.aspx" class="dsort" title="Back to recipe homepage">Home</a>&nbsp;<span class="bluearrow">�</span>&nbsp;
+    &nbsp;&nbsp;<a href="default.aspx" class="dsort" title="<%= Resources.lang.Back_to_recipe_homepage %>" > <% = Resources.lang.Home %></a>&nbsp;<span class="bluearrow">»</span>&nbsp;
     <asp:Label cssClass="content2" id="lbcatname" runat="server" Font-Bold="True" EnableViewState="false" /> <span class="content2"><asp:Label cssClass="content2" id="lbcount" runat="server" EnableViewState="false" /></span>
     <asp:Label cssClass="content2" id="lblsortname" runat="server" Font-Bold="True" EnableViewState="false" />
     </div>
@@ -46,8 +46,8 @@
         <div class="divwrap">
            <div class="divhd">
     <img src="images/arrow.gif" alt="" />
-    <a class="artcat" title="Read full details of <%# Eval("Title")%> article." href='<%# Eval("ID", "articledetail.aspx?aid={0}") %>'><%# Eval("Title") %></a> 
-    <asp:Label ID="lblpopular" cssClass="hot" runat="server" EnableViewState="false" /> <asp:Image ID="newimg" runat="server" EnableViewState="false" /><asp:Image id="thumbsup" runat="server" AlternateText = "Thumsb up" EnableViewState="false" />
+    <a class="artcat" title="Đọc chi tiết bài viết <%# Eval("Title")%> ." href='<%# Eval("ID", "articledetail.aspx?aid={0}") %>'><%# Eval("Title") %></a> 
+    <asp:Label ID="lblpopular" cssClass="hot" runat="server" EnableViewState="false" /> <asp:Image ID="newimg" runat="server" EnableViewState="false" /><asp:Image id="thumbsup" runat="server" AlternateText = "" EnableViewState="false" />
     </div> 
     <div class="divbd">
     <div style="margin-bottom: 3px;">
@@ -55,7 +55,7 @@
     </div>
     <div style="margin-bottom: 1px;">
     <span class="content16">
-    By&nbsp;<img src="images/user-icon.gif" />&nbsp;<a href="findallarticlebyauthor.aspx?author=<%# Eval("Author") %>" onmouseover="Tip('View all article published by <b><%# Eval("Author") %></b>', BGCOLOR, '#FFFBE1', BORDERCOLOR, '#acc6db')" onmouseout="UnTip()"><%# Eval("Author") %></a>&nbsp;&nbsp;Published on <span class="cyel"><%# CustomDateFormat(Eval("Date"))%></span>&nbsp;&nbsp;Hits: <span class="cmaron3"><%# Eval("Hits", "{0:#,###}")%></span>&nbsp;&nbsp;Rating:&nbsp;<img src="images/<%# Eval("Rating", "{0:0.0}")%>.gif" />&nbsp;(<span class="cgr"><%# Eval("Rating", "{0:0.0}")%></span>) votes <span class="cyel"><%# Eval("NoRates")%></span>
+    Viết bởi&nbsp;<img src="images/user-icon.gif" />&nbsp;<a href="findallarticlebyauthor.aspx?author=<%# Eval("Author") %>" onmouseover="Tip('Xem tất cả bài hát viết bởi <b><%# Eval("Author") %></b>', BGCOLOR, '#FFFBE1', BORDERCOLOR, '#acc6db')" onmouseout="UnTip()"><%# Eval("Author") %></a>&nbsp;&nbsp;ngày viết bài <span class="cyel"><%# CustomDateFormat(Eval("Date"))%></span>&nbsp;&nbsp;<% = Resources.lang.Hits %>: <span class="cmaron3"><%# Eval("Hits", "{0:#,###}")%></span>&nbsp;&nbsp;Đánh giá:&nbsp;<img src="images/<%# Eval("Rating", "{0:0.0}")%>.gif" />&nbsp;(<span class="cgr"><%# Eval("Rating", "{0:0.0}")%></span>) bình luận <span class="cyel"><%# Eval("NoRates")%></span>
     </span>
     </div>
     </div>

@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" EnableViewState="false" CodeFile="printlyric.aspx.cs" Inherits="printlyric" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" EnableViewState="false" CodeFile="printlyric.aspx.cs" Inherits="printlyric" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -34,7 +34,7 @@
   <tr>
     <td width="100%">
 <div style="text-align: center;">
-<a class="hlink" href="javascript:onClick=window.print()">Print Lyric</a>
+<a class="hlink" href="javascript:onClick=window.print()">In lời bài hát</a>
 </div>
 </td>
   </tr>

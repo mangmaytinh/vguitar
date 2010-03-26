@@ -19,7 +19,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
     <ucl:searchtab id="searchcont" runat="server"></ucl:searchtab>
     <div style="margin-left: 10px; margin-right: 12px; background-color: #FFF9EC; margin-top: 0px;">
-    &nbsp;&nbsp;<a href="default.aspx" class="dsort" title="Back to recipe homepage">Home</a>&nbsp;<span class="bluearrow">�</span>&nbsp;<asp:Label cssClass="content10" runat="server" id="lblcatname2" EnableViewState="false" /> <span class="content2"><asp:Label cssClass="content2" id="lblcount" runat="server" EnableViewState="false" /></span>
+    &nbsp;&nbsp;<a href="default.aspx" class="dsort" title="Quay lại trang chủ"><% = Resources.lang.Home %></a>&nbsp;<span class="bluearrow">�</span>&nbsp;<asp:Label cssClass="content10" runat="server" id="lblcatname2" EnableViewState="false" /> <span class="content2"><asp:Label cssClass="content2" id="lblcount" runat="server" EnableViewState="false" /></span>
     <asp:Label cssClass="content2" id="lblsortname" runat="server" Font-Bold="True" EnableViewState="false" />
     </div>
     <div style="padding: 2px; margin-bottom: 14px; margin-top: 12px; margin-left: 16px; margin-right: 26px;">

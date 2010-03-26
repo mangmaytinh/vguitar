@@ -1,13 +1,13 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Login.ascx.cs" Inherits="Login" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Login.ascx.cs" Inherits="Control.Login" %>
 <div class="loginerrmsgwrapper">
-<asp:Label runat="server" CssClass="InvalidCred" id="lblinvalidcredential" Visible="False" EnableViewState="False" Text="Thông tin đăng nhập không đúng.<br>Hãy kiểm tra lại" />
- <asp:requiredfieldvalidator id="RequiredFieldValidatorUnameMain"
+<asp:Label runat="server" CssClass="InvalidCred" id="Lblinvalidcredential" Visible="False" EnableViewState="False" Text="Thông tin đăng nhập không đúng.<br>Hãy kiểm tra lại" />
+ <asp:RequiredFieldValidator id="RequiredFieldValidatorUnameMain"
       controltovalidate="uname"
       CssClass="InvalidCred"
       validationgroup="LoginGroup"
       errormessage="Tài khoản không được để rỗng"
       runat="Server"></asp:requiredfieldvalidator>
-     <asp:requiredfieldvalidator id="RequiredFieldValidatorUPassMain"
+     <asp:RequiredFieldValidator id="RequiredFieldValidatorUPassMain"
       controltovalidate="upass"
       CssClass="InvalidCred"
       validationgroup="LoginGroup"
@@ -52,4 +52,4 @@
     &nbsp;</div>
 </asp:Panel>
 <asp:Panel Visible="false" ID="DisplayUserInfo" runat="server" style="margin-top: 30px;">
-<asp:Label cssClass="content01" runat="server" Visible="false" id="lblnewfriendalert" /><asp:Label cssClass="content01" runat="server" Visible="false" id="lblPrivateMessageAlert" /><asp:Label cssClass="content12" runat="server" id="lblusername" />&nbsp;&nbsp;<asp:Button ID="Buttonlogout" runat="server" OnClick="Logout_Click" cssClass="submitadmin" Text="Logout" /></asp:Panel>
+<asp:Label cssClass="content01" runat="server" Visible="false" id="lblnewfriendalert" /><asp:Label cssClass="content01" runat="server" Visible="false" id="lblPrivateMessageAlert" /><asp:Label cssClass="content12" runat="server" id="lblusername" />&nbsp;&nbsp;<asp:Button ID="Buttonlogout" runat="server" OnClick="Logout_Click" cssClass="submitadmin" Text="Thoát" /></asp:Panel>

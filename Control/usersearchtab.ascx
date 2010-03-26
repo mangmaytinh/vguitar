@@ -16,7 +16,7 @@
 <asp:Listitem Value="6">Quốc Tịch</asp:Listitem>
 </asp:dropdownlist>
 <input type="text" name="usersearcbasicinput" id="usersearcbasicinput" class="textboxsearch" size="20" value="Administrator" onfocus="if(this.value=='Administrator')value='';" onblur="if(this.value=='')value='Administrator';" runat="server">
-<asp:Button ID="Sbuton" runat="server" cssClass="submitadmin" OnClick="SearchUserbasic_Click" Text="Search" />
+<asp:Button ID="Sbuton" runat="server" cssClass="submitadmin" OnClick="SearchUserbasic_Click" Text="Tìm kiếm" />
 </div>
 </div>
 </div>

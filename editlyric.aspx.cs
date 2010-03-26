@@ -55,6 +55,10 @@ public partial class editlyric : BasePage
                 Hits.Value = lyric.Hits.ToString();
                 Ingredients.Value = lyric.Ingredients;
                 Instructions.Value = lyric.Instructions;
+                UrlMusic.Value = lyric.UrlMusic;
+                UrlZing.Value = lyric.UrlZing;
+                UrlYoutube.Value = lyric.UrlYoutube;
+                UrlChacha.Value = lyric.UrlChacha;
 
                 if (lyric.UID == UserIdentity.UserID)
                 {
@@ -94,6 +98,11 @@ public partial class editlyric : BasePage
             lyric.Instructions = Request.Form[Instructions.UniqueID];
             lyric.Hits = int.Parse(Request.Form[Hits.UniqueID]);
 
+            lyric.UrlMusic = Util.FormatTextForInput(Request.Form[UrlMusic.UniqueID]);
+            lyric.UrlChacha = Util.FormatTextForInput(Request.Form[UrlChacha.UniqueID]);
+            lyric.UrlZing = Util.FormatTextForInput(Request.Form[UrlZing.UniqueID]);
+            lyric.UrlYoutube = Util.FormatTextForInput(Request.Form[UrlYoutube.UniqueID]);
+
             #region Form Input Validator
             //Validate for empty recipe name
             if (lyric.LyricName.Length == 0)
@@ -110,12 +119,12 @@ public partial class editlyric : BasePage
                 return;
             }
             //Validate for empty instruction
-            if (lyric.Instructions.Length == 0)
-            {
-                lbvalenght.Text = "<br>Error: Instructions is empty, please enter an instruction.";
-                lbvalenght.Visible = true;
-                return;
-            }
+            //if (lyric.Instructions.Length == 0)
+            //{
+            //    lbvalenght.Text = "<br>Error: Instructions is empty, please enter an instruction.";
+            //    lbvalenght.Visible = true;
+            //    return;
+            //}
 
             //lyric name maximum of 50 char allowed
             if (lyric.LyricName.Length > 50)
