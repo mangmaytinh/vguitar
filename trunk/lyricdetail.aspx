@@ -43,7 +43,7 @@
     <!--End header User option-->
     <table cellpadding="0" cellspacing="0" width="100%">
       <tr>
-        <td valign="top" align="left" width="35%">
+        <td valign="top" align="left" style="width: 35%">
     <div style="background: #fff url(images/rbg1.gif) repeat-x;">
     <div style="padding-top: 8px;">
     &nbsp;&nbsp;<asp:Label cssClass="cmaron4" runat="server" id="lblname" EnableViewState="false" /> <asp:Label runat="server" id="lblpopular" cssClass="hot" EnableViewState="false" /> <asp:Image id="thumbsup" runat="server" AlternateText = "Thumsb up" EnableViewState="false" /><asp:Image id="newimg" runat="server" AlternateText = "New image" EnableViewState="false" />
@@ -58,6 +58,7 @@
     </div>
     <div>    
     &nbsp;&nbsp;<span class="content2">Người đăng bài:</span>&nbsp;<img src="images/user-icon.gif" />&nbsp;<a href="findalllyricbycreateby.aspx?author=<%=strCreateBy %>" onmouseover="Tip('Xem tất cả những bài đăng bởi <b><%=strCreateBy%></b>.', BGCOLOR, '#FFFBE1', BORDERCOLOR, '#acc6db')" onmouseout="UnTip()"><%=strCreateBy %></a>
+    <img src="images/user-icon.gif" />&nbsp;<asp:Label runat="server" id="lblauthor" cssClass="content2" EnableViewState="false" />&nbsp;&nbsp;<asp:HyperLink CssClass="content2" ID="editLyriclink" Visible="false" runat="server" EnableViewState="false" />
     </div>
     <div>
     &nbsp;&nbsp;<span class="content2">Ngày viết bài:</span>
@@ -74,34 +75,30 @@
     <asp:Panel ID="Panel2" runat="server" Height="50px" Width="220px">
     &nbsp;&nbsp;<b><span id="link<%=Request.QueryString["id"]%>" class="cgr">Đánh giá bài hát</span></b>
     <ul class="srating">
-    <li><a href="#" onmouseover="document.getElementById('link<%=Request.QueryString["id"]%>').innerHTML='Tồi - 1 sao'"  onmouseout="document.getElementById('link<%=Request.QueryString["id"]%>').innerHTML='Đánh giá bài hát này'" onclick="javascript:top.document.location.href='rate.aspx?id=<%=Request.QueryString["id"]%>&amp;rateval=1&amp;wp=<%=LyricSection%>';" title='Bầu chọn: Không chắc chắn - 1 sao' class='onestar'>1</a></li>
-    <li><a href="#" onmouseover="document.getElementById('link<%=Request.QueryString["id"]%>').innerHTML='Bình thường - 2 sao'" onmouseout="document.getElementById('link<%=Request.QueryString["id"]%>').innerHTML='Đánh giá bài hát này'" onclick="javascript:top.document.location.href='rate.aspx?id=<%=Request.QueryString["id"]%>&amp;rateval=2&amp;wp=<%=LyricSection%>';" title='Bầu chọn: Bình thường - 2 sao' class='twostars'>2</a></li>
-    <li><a href="#" onmouseover="document.getElementById('link<%=Request.QueryString["id"]%>').innerHTML='Thú vị - 3 sao'" onmouseout="document.getElementById('link<%=Request.QueryString["id"]%>').innerHTML='Đánh giá bài hát này'" onclick="javascript:top.document.location.href='rate.aspx?id=<%=Request.QueryString["id"]%>&amp;rateval=3&amp;wp=<%=LyricSection%>';" title='Bầu chọn: Thú vị - 3 sao' class='threestars'>3</a></li>
-    <li><a href="#" onmouseover="document.getElementById('link<%=Request.QueryString["id"]%>').innerHTML='Tốt - 4 sao'" onmouseout="document.getElementById('link<%=Request.QueryString["id"]%>').innerHTML='Đánh giá bài hát này'" onclick="javascript:top.document.location.href='rate.aspx?id=<%=Request.QueryString["id"]%>&amp;rateval=4&amp;wp=<%=LyricSection%>';" title='Bầu chọn: Rất tốt - 4 sao' class='fourstars'>4</a></li>
-    <li><a href="#" onmouseover="document.getElementById('link<%=Request.QueryString["id"]%>').innerHTML='Tuyệt vời - 5 sao'" onmouseout="document.getElementById('link<%=Request.QueryString["id"]%>').innerHTML='Đánh giá bài hát này'" onclick="javascript:top.document.location.href='rate.aspx?id=<%=Request.QueryString["id"]%>&amp;rateval=5&amp;wp=<%=LyricSection%>';" title='Bầu chọn: Tuyệt vời - 5 sao' class='fivestars'>5</a></li>
-    </ul>
+    <li><a href="#" onmouseover="document.getElementById('link<%=Request.QueryString["id"]%>').innerHTML='Tồi - 1 sao'"  onmouseout="document.getElementById('link<%=Request.QueryString["id"]%>').innerHTML='Đánh giá bài hát này'" onclick="javascript:top.document.location.href='rate.aspx?id=<%=Request.QueryString["id"]%>&amp;rateval=1&amp;wp=<%=LyricSection%>';" title='Bầu chọn: Không chắc chắn - 1 sao' class='onestar'>1</a></li><li><a href="#" onmouseover="document.getElementById('link<%=Request.QueryString["id"]%>').innerHTML='Bình thường - 2 sao'" onmouseout="document.getElementById('link<%=Request.QueryString["id"]%>').innerHTML='Đánh giá bài hát này'" onclick="javascript:top.document.location.href='rate.aspx?id=<%=Request.QueryString["id"]%>&amp;rateval=2&amp;wp=<%=LyricSection%>';" title='Bầu chọn: Bình thường - 2 sao' class='twostars'>2</a></li><li><a href="#" onmouseover="document.getElementById('link<%=Request.QueryString["id"]%>').innerHTML='Thú vị - 3 sao'" onmouseout="document.getElementById('link<%=Request.QueryString["id"]%>').innerHTML='Đánh giá bài hát này'" onclick="javascript:top.document.location.href='rate.aspx?id=<%=Request.QueryString["id"]%>&amp;rateval=3&amp;wp=<%=LyricSection%>';" title='Bầu chọn: Thú vị - 3 sao' class='threestars'>3</a></li><li><a href="#" onmouseover="document.getElementById('link<%=Request.QueryString["id"]%>').innerHTML='Tốt - 4 sao'" onmouseout="document.getElementById('link<%=Request.QueryString["id"]%>').innerHTML='Đánh giá bài hát này'" onclick="javascript:top.document.location.href='rate.aspx?id=<%=Request.QueryString["id"]%>&amp;rateval=4&amp;wp=<%=LyricSection%>';" title='Bầu chọn: Rất tốt - 4 sao' class='fourstars'>4</a></li><li><a href="#" onmouseover="document.getElementById('link<%=Request.QueryString["id"]%>').innerHTML='Tuyệt vời - 5 sao'" onmouseout="document.getElementById('link<%=Request.QueryString["id"]%>').innerHTML='Đánh giá bài hát này'" onclick="javascript:top.document.location.href='rate.aspx?id=<%=Request.QueryString["id"]%>&amp;rateval=5&amp;wp=<%=LyricSection%>';" title='Bầu chọn: Tuyệt vời - 5 sao' class='fivestars'>5</a></li></ul>
     </asp:Panel>
      </div>
     </div>
     </td>
-        <td valign="top" align="left" width="65%" style="background: #fff url(images/rbg1.gif) repeat-x;">
+        <td valign="top" align="left" width="35%" style="background: #fff url(images/rbg1.gif) repeat-x;">
      <div style="background: #fff url(images/rbg1.gif) repeat-x;">
      <asp:Image ID="Lyricimage" CssClass="Lyricimage" BorderColor="#A0BEE2" BorderWidth="1" Width="150" Height="120" runat="server"/>
+     <div style="padding-top: 30px; line-height: 20px;">
+         <fieldset><legend>Nghe nhạc / xem video hướng dẫn</legend>
+          <div style="padding-top: 12px; padding-right: 12px; line-height: 20px;">                            
+              <asp:Literal ID="lblMediaPlayer" runat="server"></asp:Literal></div>
+        </fieldset>
+    </div>
      </div>
     </td>
       </tr>
     </table>
      <div style="margin: 6px;">
-     <fieldset><legend>Nghe nhạc / xem video hướng dẫn</legend>
-      <div style="padding-top: 12px; padding-right: 12px; line-height: 20px;">
-      
-     </div>
-    </fieldset>
-    </div>
+         &nbsp;</div>
     <div style="margin: 6px;">
      <fieldset><legend>Hợp âm bài hát</legend>
      <div style="padding-top: 12px; padding-right: 12px; line-height: 20px;">
-      <asp:Label cssClass="drecipe" ID="lblIngredients" runat="server" EnableViewState="false" />
+      <asp:Label cssClass="drecipe" ID="lblIngredients" runat="server" EnableViewState="false" />&nbsp;
      </div>
     </fieldset>
     </div>

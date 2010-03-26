@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/SiteTemplate2.master" EnableViewState="false" AutoEventWireup="true" CodeFile="myfriendslist.aspx.cs" Inherits="myfriendslist" Title="My friends list" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/SiteTemplate2.master" EnableViewState="false" AutoEventWireup="true" CodeFile="myfriendslist.aspx.cs" Inherits="myfriendslist" Title="Danh sách bạn bè" %>
 <%@ Register TagPrefix="ucl" TagName="sidemenu" Src="Control/sidemenu.ascx" %>
 <%@ Register TagPrefix="ucl" TagName="usersearchtab" Src="Control/usersearchtab.ascx" %>
 
@@ -9,7 +9,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
 <ucl:usersearchtab id="searchusercont" runat="server"></ucl:usersearchtab>
     <div style="margin-left: 10px; margin-bottom: 12px; margin-right: 12px; background-color: #FFF9EC; margin-top: 0px;">
-    &nbsp;&nbsp;<a href="default.aspx" class="dsort" title="Back to recipe homepage">Home</a>&nbsp;<span class="bluearrow">�</span>&nbsp; <span class="content2">You are here: My Friends List</span>
+    &nbsp;&nbsp;<a href="default.aspx" class="dsort" title="Back to recipe homepage">Trang chủ</a>&nbsp;<span class="bluearrow">»</span>&nbsp; <span class="content2">Bạn đang trong mục: Danh sách bạn bè</span>
     </div>
     <div style="margin-left: 15px;">   
     <table border="0" cellpadding="2" align="left" cellspacing="2" width="75%">
@@ -35,7 +35,7 @@
           <div id="confirmModal<%# Eval("ID")%>" style="display:none;">
             <div class="confirm">
                 <div class="message">
-                 <img src="images/icon_confirm.gif" alt="confirm icon" style="float: left; margin-right: 10px;" /> Are you sure you want to remove <span style="color:#266B91"><b><%# Eval("Username")%></b></span> from your Friends List?
+                 <img src="images/icon_confirm.gif" alt="confirm icon" style="float: left; margin-right: 10px;" /> Bạn có chắc chắn muốn xoá <span style="color:#266B91"><b><%# Eval("Username")%></b></span> ra khỏi danh sách Bạn bè của bạn?
                 </div>
                 <div class="commands" style="text-align: center;">
                     <input type="button" value="Yes" class="submitpopupmodal" onclick="sendRequestDeleteAFriend('<%# Eval("FriendID")%>')">&nbsp;&nbsp;<input type="button" value="No" class="submitpopupmodal" onclick="tb_remove(); return false;">

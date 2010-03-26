@@ -100,6 +100,13 @@ namespace VGuitar.Model
 
         protected int _UID;
 
+        protected string _UrlMusic;
+
+        protected string _UrlVideo;
+        protected string _UrlZing;
+        protected string _UrlChacha;
+        protected string _UrlYoutube;
+
         #endregion
 
         #region Properties - Get and Set Accessor
@@ -255,6 +262,36 @@ namespace VGuitar.Model
         {
             get { return _CreateBy; }
             set { _CreateBy = value; }
+        }
+
+        public string UrlMusic
+        {
+            get { return _UrlMusic; }
+            set { _UrlMusic = value; }
+        }
+
+        public string UrlVideo
+        {
+            get { return _UrlVideo; }
+            set { _UrlVideo = value; }
+        }
+
+        public string UrlZing
+        {
+            get { return _UrlZing; }
+            set { _UrlZing = value; }
+        }
+
+        public string UrlChacha
+        {
+            get { return _UrlChacha; }
+            set { _UrlChacha = value; }
+        }
+
+        public string UrlYoutube
+        {
+            get { return _UrlYoutube; }
+            set { _UrlYoutube = value; }
         }
         #endregion
     }

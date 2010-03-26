@@ -103,6 +103,30 @@ namespace VGuitar.BL.Providers.Lyrics
                 {
                     this._CreateBy = (string)dr["CreateBy"];
                 }
+                if (dr["UrlMusic"] != DBNull.Value)
+                {
+                    this._UrlMusic = (string)dr["UrlMusic"];
+                }
+                if (dr["UrlVideo"] != DBNull.Value)
+                {
+                    this._UrlVideo = (string)dr["UrlVideo"];
+                }
+
+                if (dr["UrlChacha"] != DBNull.Value)
+                {
+                    this._UrlChacha = (string)dr["UrlChacha"];
+                }
+
+                if (dr["UrlZing"] != DBNull.Value)
+                {
+                    this._UrlZing = (string)dr["UrlZing"];
+                }
+
+                if (dr["UrlYoutube"] != DBNull.Value)
+                {
+                    this._UrlYoutube = (string)dr["UrlYoutube"];
+                }
+
 
                 dr.Close();
                 dr = null;

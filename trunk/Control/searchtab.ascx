@@ -3,7 +3,7 @@
 <!--Begin Search-->
 <div style="margin-left: 10px; margin-right: 12px;">
 <div class="toproundbluesearchtab">
-<div class="toproundbluesearchtabheader"><span class="content3" style="color: #fff;"><asp:Label ID="lblAmount" runat="server" Text="<%$ Resources:lang, Song Search %>"></asp:Label></span></div>
+<div class="toproundbluesearchtabheader"><span class="content3" style="color: #fff;"><asp:Label ID="lblAmount" runat="server" Text="<%$ Resources:lang, Song_Search %>"></asp:Label></span></div>
 </div>
 <div id="basic" class="tbcont">
 <div style="padding-top: 5px; color: #000;">

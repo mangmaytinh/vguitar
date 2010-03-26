@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/SiteTemplate2.master" EnableViewState="false" AutoEventWireup="true" CodeFile="userprofile.aspx.cs" Inherits="userprofile" Title="Untitled Page" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/SiteTemplate2.master" EnableViewState="false" AutoEventWireup="true" CodeFile="userprofile.aspx.cs" Inherits="userprofile" Title="Untitled Page" %>
 <%@ Register TagPrefix="ucl" TagName="sidemenu" Src="Control/sidemenu.ascx" %>
 <%@ Register TagPrefix="ucl" TagName="usersearchtab" Src="Control/usersearchtab.ascx" %>
 
@@ -9,7 +9,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
 <ucl:usersearchtab id="searchusercont" runat="server"></ucl:usersearchtab>
     <div style="margin-left: 10px; margin-right: 12px; background-color: #FFF9EC; margin-top: 0px;">
-    &nbsp;&nbsp;<a href="default.aspx" class="dsort" title="Back to recipe homepage">Home</a>&nbsp;<span class="bluearrow">�</span>&nbsp; <span class="content2">You are here: User Profile Page</span>
+    &nbsp;&nbsp;<a href="default.aspx" class="dsort" title="Back to recipe homepage">Trang chủ</a>&nbsp;<span class="bluearrow">»</span>&nbsp; <span class="content2">Bạn đang trong mục: Hồ sơ cá nhân</span>
     </div>
     <div style="margin-left: 15px; margin-top: 15px;">
     <asp:Label runat="server" CssClass="content12" id="lbladdfriendsuccessmsg" Visible="false" EnableViewState="false" />
@@ -34,7 +34,7 @@
         </div>        
         <asp:Panel ID="MyFriendsListPanel" runat="server" Visible="false">     
         <div style="margin-top: 10px; margin-bottom:6px;">
-        <img src="images/iconuser2.gif" alt="user" />&nbsp;<span class="content12" style="color:Black;"><b>My Friends</b> <asp:Label runat="server" CssClass="content2" ForeColor="#000000" id="lblmyfriendscount" EnableViewState="false" /></span>
+        <img src="images/iconuser2.gif" alt="user" />&nbsp;<span class="content12" style="color:Black;"><b>Danh sách bạn</b> <asp:Label runat="server" CssClass="content2" ForeColor="#000000" id="lblmyfriendscount" EnableViewState="false" /></span>
         <br />
         <asp:Label runat="server" CssClass="content2" id="lblnofriends" EnableViewState="false" />
         <asp:Repeater id="MyFriendsList" runat="server" EnableViewState="false">
@@ -48,13 +48,13 @@
         </asp:Panel>       
         <asp:Panel ID="MyCookBookPanel" runat="server" Visible="false">   
         <div style="margin-top: 10px;">
-        <img src="images/cookbookicon2.gif" alt="user" /> <span class="content12" style="color:Black;"><b>My CookBook</b> <asp:Label runat="server" CssClass="content2" ForeColor="#000000" id="lblmycookbookcount" EnableViewState="false" /></span>
+        <img src="images/cookbookicon2.gif" alt="user" /> <span class="content12" style="color:Black;"><b>Bài hát yêu thích</b> <asp:Label runat="server" CssClass="content2" ForeColor="#000000" id="lblmycookbookcount" EnableViewState="false" /></span>
         <br />
         <asp:Label runat="server" CssClass="content2" id="lblnosavedrecipe" EnableViewState="false" />
         <asp:Repeater id="SavedUserCookBookProfile" runat="server" EnableViewState="false">
        <ItemTemplate>
         <div class="dcnt2">
-        <span class="cyel">&raquo;</span>&nbsp;<a class="content2" title="View <%# Eval("LyricName") %> recipe" onmouseover="Tip('<b>Lyric Name:</b> <%# Eval("LyricName") %><br><b>Author:</b> <%# Eval("Author") %><br><b>Category:</b> <%# Eval("Category") %><br><b>Hits:</b> (<%# Eval("Hits") %>)<br><b>Rating:</b> (<%# Eval("Rating") %>)<br><b>Comments:</b> (<%# Eval("Comments") %>)<br>Added to the CookBook on: <%# Eval("Date", "{0:M/d/yyyy}")%><br><b>Photo:</b><br><img src=&quot;LyricImageUpload/<%# Eval("LyricImage")%>&quot; width=&quot;150&quot; height=&quot;120&quot;>', BGCOLOR, '#FFFBE1', BORDERCOLOR, '#acc6db')" onmouseout="UnTip()" href='<%# Eval("RecipeID", "lyricdetail.aspx?id={0}") %>'><%# Eval("LyricName")%></a>
+        <span class="cyel">&raquo;</span>&nbsp;<a class="content2" title="View <%# Eval("LyricName") %> recipe" onmouseover="Tip('<b>Tên bài hát:</b> <%# Eval("LyricName") %><br><b>Tác giả:</b> <%# Eval("Author") %><br><b>Chuyên mục:</b> <%# Eval("Category") %><br><b>Số lần xem:</b> (<%# Eval("Hits") %>)<br><b>Đánh giá:</b> (<%# Eval("Rating") %>)<br><b>Bình luận:</b> (<%# Eval("Comments") %>)<br>Added to the CookBook on: <%# Eval("Date", "{0:M/d/yyyy}")%><br><b>Photo:</b><br><img src=&quot;LyricImageUpload/<%# Eval("LyricImage")%>&quot; width=&quot;150&quot; height=&quot;120&quot;>', BGCOLOR, '#FFFBE1', BORDERCOLOR, '#acc6db')" onmouseout="UnTip()" href='<%# Eval("RecipeID", "lyricdetail.aspx?id={0}") %>'><%# Eval("LyricName")%></a>
         </div>
        </ItemTemplate>
       </asp:Repeater>
@@ -64,71 +64,71 @@
         <td width="60%" valign="top">
         <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
-        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Username:</b></span></div></td>
+        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Tài khoản:</b></span></div></td>
         <td width="60%" align="left"><div style="margin-top: 9px;"><asp:Label runat="server" CssClass="content12" id="lblusername" EnableViewState="false" /></div></td>
     </tr>
     <tr>
-        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Joined On:</b></span></div></td>
+        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Ngày tạo:</b></span></div></td>
         <td width="60%" align="left"><div style="margin-top: 9px;"><asp:Label runat="server" CssClass="content12" id="lbljoined" EnableViewState="false" /></div></td>
     </tr>
     <tr>
-        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Full Name:</b></span></div></td>
+        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Tên đầy đủ:</b></span></div></td>
         <td width="60%" align="left"><div style="margin-top: 9px;"><asp:Label runat="server" CssClass="content12" id="lblfullname" EnableViewState="false" /></div></td>
     </tr>
     <tr>
-        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>DOB:</b></span></div></td>
+        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Ngày sinh:</b></span></div></td>
         <td width="60%" align="left"><div style="margin-top: 9px;"><asp:Label runat="server" CssClass="content12" id="lbldob" EnableViewState="false" /></div></td>
     </tr>
     <tr>
-        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>City:</b></span></div></td>
+        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Thủ đô:</b></span></div></td>
         <td width="60%" align="left"><div style="margin-top: 9px;"><asp:Label runat="server" CssClass="content12" id="lblcity" EnableViewState="false" /></div></td>
     </tr>
     <tr>
-        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>State/Province:</b></span></div></td>
+        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Vùng/Miền:</b></span></div></td>
         <td width="60%" align="left"><div style="margin-top: 9px;"><asp:Label runat="server" CssClass="content12" id="lblstate" EnableViewState="false" /></div></td>
     </tr>
     <tr>
-        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Country:</b></span></div></td>
+        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Quốc Tịch:</b></span></div></td>
         <td width="60%" align="left"><div style="margin-top: 9px;"><asp:Label runat="server" CssClass="content12" id="lblcountry" EnableViewState="false" /></div></td>
     </tr>
     <tr>
-        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Profile Views:</b></span></div></td>
+        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Số lần xem hồ sơ:</b></span></div></td>
         <td width="60%" align="left"><div style="margin-top: 9px;"><asp:Label runat="server" CssClass="content12" id="lblprofileviews" EnableViewState="false" /></div></td>
     </tr>
     <tr>
-        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Last Visit:</b></span></div></td>
+        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Lần đăng nhập cuối:</b></span></div></td>
         <td width="60%" align="left"><div style="margin-top: 9px;"><asp:Label runat="server" CssClass="content12" id="lbllastlogin" EnableViewState="false" /></div></td>
     </tr>
     <tr>
-        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Last Updated:</b></span></div></td>
+        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Lần cập nhật cuối:</b></span></div></td>
         <td width="60%" align="left"><div style="margin-top: 9px;"><asp:Label runat="server" CssClass="content12" id="lbllastupdate" EnableViewState="false" /></div></td>
     </tr>
     <tr>
-        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Submitted Lyric:</b></span></div></td>
+        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Bài hát:</b></span></div></td>
         <td width="60%" align="left"><div style="margin-top: 9px;"><asp:Label runat="server" CssClass="content12" id="lblpostedrecipecount" EnableViewState="false" /></div></td>
     </tr>
     <tr>
-        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Published Article:</b></span></div></td>
+        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Bài viết:</b></span></div></td>
         <td width="60%" align="left"><div style="margin-top: 9px;"><asp:Label runat="server" CssClass="content12" id="lblpostedarticlecount" EnableViewState="false" /></div></td>
     </tr>
      <tr>
-        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Comments Lyric:</b></span></div></td>
+        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Bình luận bài hát:</b></span></div></td>
         <td width="60%" align="left"><div style="margin-top: 9px;"><asp:Label runat="server" CssClass="content12" id="lblcommentedrecipe" EnableViewState="false" /></div></td>
     </tr>
      <tr>
-        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Comments Article:</b></span></div></td>
+        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Bình luận bài viết:</b></span></div></td>
         <td width="60%" align="left"><div style="margin-top: 9px;"><asp:Label runat="server" CssClass="content12" id="lblcommentarticle" EnableViewState="false" /></div></td>
     </tr>
     <tr>
-        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Favorite Food1:</b></span></div></td>
+        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Bài hát yêu thích 1:</b></span></div></td>
         <td width="60%" align="left"><div style="margin-top: 9px;"><asp:Label runat="server" CssClass="content12" id="lblfavfood1" EnableViewState="false" /></div></td>
     </tr>
     <tr>
-        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Favorite Food2:</b></span></div></td>
+        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Bài hát yêu thích 2:</b></span></div></td>
         <td width="60%" align="left"><div style="margin-top: 9px;"><asp:Label runat="server" CssClass="content12" id="lblfavfood2" EnableViewState="false" /></div></td>
     </tr>
     <tr>
-        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Favorite Food3:</b></span></div></td>
+        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Bài hát yêu thích 3:</b></span></div></td>
         <td width="60%" align="left"><div style="margin-top: 9px;"><asp:Label runat="server" CssClass="content12" id="lblfavfood3" EnableViewState="false" /></div></td>
     </tr>
     <tr>
@@ -136,7 +136,7 @@
         <td width="60%" align="left"><div style="margin-top: 9px;"><asp:Label runat="server" CssClass="content12" id="lblwebsite" EnableViewState="false" /></div></td>
     </tr>
     <tr>
-        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>About Me:</b></span></div></td>
+        <td width="35%"><div style="margin-top: 9px;"><span class="contentpro"><b>Giấy thiệu bản thân:</b></span></div></td>
         <td width="60%" align="left"><div style="margin-top: 9px;"><asp:Label runat="server" CssClass="content12" id="lblaboutme" EnableViewState="false" /></div></td>
     </tr>
 
@@ -149,11 +149,11 @@
      <div style="float: right; margin-right: 85px; margin-top: 20px;">
      <asp:Panel ID="PanelLast5recipeByUser" Visible="false" runat="server">
          <div class="containertop5userrecipe">     
-               <b>Published Lyric</b>
+               <b>Bài hát</b>
                <asp:Repeater id="Last5RecipeByUser" runat="server">
                <ItemTemplate>
                 <div class="dcnt2" style="margin-top: 3px;">
-                <span class="cyel">&raquo;</span>&nbsp;<a class="content2" onmouseover="Tip('<b>Lyric Name:</b> <%# Eval("LyricName") %><br><b>Category:</b> <%# Eval("Category") %><br><b>Hits:</b> (<%# Eval("Hits") %>)<br><b>Photo:</b><br><img src=&quot;LyricImageUpload/<%# Eval("LyricImage")%>&quot; width=&quot;150&quot; height=&quot;120&quot;>', BGCOLOR, '#FFFBE1', BORDERCOLOR, '#acc6db')" onmouseout="UnTip()" href='<%# Eval("ID", "lyricdetail.aspx?id={0}") %>'><%# Eval("LyricName")%></a>
+                <span class="cyel">&raquo;</span>&nbsp;<a class="content2" onmouseover="Tip('<b>Tên bài hát:</b> <%# Eval("LyricName") %><br><b>Chuyên mục:</b> <%# Eval("Category") %><br><b>Số lần xem:</b> (<%# Eval("Hits") %>)<br><b>Ảnh:</b><br><img src=&quot;LyricImageUpload/<%# Eval("LyricImage")%>&quot; width=&quot;150&quot; height=&quot;120&quot;>', BGCOLOR, '#FFFBE1', BORDERCOLOR, '#acc6db')" onmouseout="UnTip()" href='<%# Eval("ID", "lyricdetail.aspx?id={0}") %>'><%# Eval("LyricName")%></a>
                 </div>       
                </ItemTemplate>
               </asp:Repeater>
@@ -165,11 +165,11 @@
          <div style="clear:both"><br /></div>
          <asp:Panel ID="PanelLast5ArticleByUser" Visible="false" runat="server">
             <div class="containertop5userarticle">
-               <b>Published Article</b>
+               <b>Bài viết</b>
                <asp:Repeater id="Last5ArticleByUser" runat="server">
                <ItemTemplate>
                 <div class="dcnt2" style="margin-top: 3px;">
-                <span class="cyel">&raquo;</span>&nbsp;<a class="content2" onmouseover="Tip('<b>Title:</b> <%# Eval("Title") %><br><b>Category:</b> <%# Eval("Category") %>', BGCOLOR, '#FFFBE1', BORDERCOLOR, '#acc6db')" onmouseout="UnTip()" href='<%# Eval("ID", "articledetail.aspx?aid={0}") %>'><%# Eval("ShortTitle")%></a>
+                <span class="cyel">&raquo;</span>&nbsp;<a class="content2" onmouseover="Tip('<b>Tiêu đề:</b> <%# Eval("Title") %><br><b>Chuyên mục:</b> <%# Eval("Category") %>', BGCOLOR, '#FFFBE1', BORDERCOLOR, '#acc6db')" onmouseout="UnTip()" href='<%# Eval("ID", "articledetail.aspx?aid={0}") %>'><%# Eval("ShortTitle")%></a>
                 </div>       
                </ItemTemplate>
               </asp:Repeater>

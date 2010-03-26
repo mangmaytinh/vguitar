@@ -1,9 +1,9 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<title>Page not found - 404 page</title>
+<title>Không tồn tại trang này</title>
     <link href="CSS/cssreciaspx.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -27,10 +27,10 @@
 <div style="text-align: left; margin-top: 35px; width: 450px; margin-left: auto; margin-right:auto;">
 <h1 style="font-family: verdana, arial, helvetica, sans-serif; font-weight: bold; color: #CC3300; font-size:x-large; margin-bottom: 1px; padding-bottom: 1px;">Oops! Sorry, We couldn't find this page for you.</h1>
 <span class="drecipe">
-We apologize, but the page you have been sent to does not exist on our server. 
-The page could have been moved to another location on our server or it had been renamed differently.</span>
+Chúng tôi xin lỗi, nhưng trang web mà bạn đã được gửi đến không tồn tại trên máy chủ của chúng tôi.
+Các trang có thể đã được chuyển tới một vị trí trên máy chủ của chúng tôi hay nó đã được đổi tên thành một cách khác nhau.</span>
 <br /><br />
-<a class="dt" href="javascript:history.go(-1)">Back to Previous Page</a>&nbsp;<span class="content2">|</span>&nbsp;<a class="dt" href="default.aspx">Back to homepage</a>
+<a class="dt" href="javascript:history.go(-1)">Quay lại trang trước</a>&nbsp;<span class="content2">|</span>&nbsp;<a class="dt" href="default.aspx">Quay lại trang chủ</a>
 </div>           
     </body>
 </html>

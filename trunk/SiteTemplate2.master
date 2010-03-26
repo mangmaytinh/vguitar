@@ -5,7 +5,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head id="Head1" runat="server">
-    <title>XD World Lyric</title>
+    <title>VGuitar</title>
     <script type="text/javascript" src="js/rcipejs.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/Ajaxrequest.js"></script>
@@ -41,7 +41,7 @@ fieldset {background: #ffffff;}
         <!--Begin Header-->
         <a name="Top"></a>
         <div class="headerwrap">
-        <div class="headerlogoleft"><a name="Top"></a><a title="Myasp-net.com" href="default.aspx"><img src="images/recipelogo.gif" width="357" height="70" border="0" alt="Myasp-net.com" /></a></div>
+        <div class="headerlogoleft"><a name="Top"></a><a title="VGuitar.net" href="default.aspx"><img src="images/vguitar.jpg"  border="0" alt="vguitar.thlb.biz" /></a></div>
         <div class="headerright">
         <div class="headerrightdatetime">
         <ucl:Login id="loginbox" runat="server"></ucl:Login>

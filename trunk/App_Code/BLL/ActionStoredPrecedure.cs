@@ -2426,19 +2426,19 @@ namespace VGuitar.BL
             SqlParameter prmID = new SqlParameter("@AID", SqlDbType.Int, 4);
             prmID.Value = article.ID;
 
-            SqlParameter prmTitle = new SqlParameter("@Title", SqlDbType.VarChar, 200);
+            SqlParameter prmTitle = new SqlParameter("@Title", SqlDbType.NVarChar, 200);
             prmTitle.Value = article.Title;
 
-            SqlParameter prmContent = new SqlParameter("@Content", SqlDbType.VarChar, 8000);
+            SqlParameter prmContent = new SqlParameter("@Content", SqlDbType.NText);
             prmContent.Value = article.Content;
 
             SqlParameter prmCatID = new SqlParameter("@CAT_ID", SqlDbType.Int, 4);
             prmCatID.Value = article.CatID;
 
-            SqlParameter prmKeyword = new SqlParameter("@Keyword", SqlDbType.VarChar, 100);
+            SqlParameter prmKeyword = new SqlParameter("@Keyword", SqlDbType.NVarChar, 100);
             prmKeyword.Value = article.Keyword;
 
-            SqlParameter prmSummary = new SqlParameter("@Summary", SqlDbType.VarChar, 500);
+            SqlParameter prmSummary = new SqlParameter("@Summary", SqlDbType.NVarChar, 800);
             prmSummary.Value = article.Summary;
 
             return DataAccess.Execute("spUpdateArticle", prmUserID, prmID, prmTitle, prmContent, prmCatID, prmKeyword, prmSummary);
@@ -2717,7 +2717,20 @@ namespace VGuitar.BL
             SqlParameter prmLyricImage = new SqlParameter("@LyricImage", SqlDbType.NVarChar, 50);
             prmLyricImage.Value = lyric.LyricImage;
 
-            return DataAccess.Execute("spUpdateLyric", prmUserID, prmID, prmName, prmCatId, prmIngred, prmInstruc, prmHits, prmLyricImage);
+            SqlParameter prmUrlMusic = new SqlParameter("@UrlMusic", SqlDbType.NVarChar, 50);
+            prmUrlMusic.Value = lyric.UrlMusic;
+
+            SqlParameter prmUrlChacha = new SqlParameter("@UrlChacha", SqlDbType.NVarChar, 50);
+            prmUrlChacha.Value = lyric.UrlChacha;
+
+            SqlParameter prmUrlZing = new SqlParameter("@UrlZing", SqlDbType.NVarChar, 50);
+            prmUrlZing.Value = lyric.UrlZing;
+
+            SqlParameter prmUrlYoutube = new SqlParameter("@UrlYoutube", SqlDbType.NVarChar, 50);
+            prmUrlYoutube.Value = lyric.UrlYoutube;
+
+
+            return DataAccess.Execute("spUpdateLyric", prmUserID, prmID, prmName, prmCatId, prmIngred, prmInstruc, prmHits, prmLyricImage,prmUrlMusic,prmUrlChacha,prmUrlZing,prmUrlYoutube);
 
         }
         #endregion
